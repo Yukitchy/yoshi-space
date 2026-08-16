@@ -142,8 +142,9 @@ td b{font-weight:900}
 .tl .when{font-size:.72rem;font-weight:900;letter-spacing:.12em;color:var(--accent)}
 .tl .st.later .when{color:var(--wood2)}
 .tl .st.far .when{color:#A79B85}
-.tl .st b{display:block;font-size:1.08rem;font-weight:900;letter-spacing:-.02em;margin:2px 0 5px}
+.tl .st>b{display:block;font-size:1.08rem;font-weight:900;letter-spacing:-.02em;margin:2px 0 5px}
 .tl .st p{font-size:.88rem;color:var(--sub);max-width:40em}
+.tl .st p b{font-weight:900;color:var(--ink)}
 
 /* roles */
 .todo{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -349,29 +350,92 @@ footer{padding:38px 0 64px;color:var(--sub);font-size:.82rem;border-top:1px soli
 
 <section id="s8"><div class="wrap">
   <div class="snum">08</div>
-  <h2>すすめかた。</h2>
-  <p class="sec-sub">大きく構えず、1ヶ月の実験として始めます。</p>
+  <h2><span class="nb">すすめかた —</span> <span class="nb">集客を育てる順番。</span></h2>
+  <p class="sec-sub">やみくもに全部やるのではなく、順番があります。<b style="color:var(--ink)">新規はプラットフォームに任せ、2回目からは自社に呼び、レビューは自分の資産にする。</b>この一周を回すのがゴールです。</p>
+
+  <svg viewBox="0 0 1000 360" style="width:100%;max-width:1000px;display:block;margin:0 auto 40px;background:#fff;border:1px solid var(--line);border-radius:18px" role="img" aria-label="集客の循環図">
+    <defs>
+      <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0 0L9 4.5L0 9z" fill="#B8875A"/>
+      </marker>
+      <marker id="ah2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0 0L9 4.5L0 9z" fill="#6E8C5A"/>
+      </marker>
+    </defs>
+    <style>
+      .bx{fill:#FBF7EF;stroke:#B8875A;stroke-width:2;rx:14}
+      .bxg{fill:#F2F7EE;stroke:#6E8C5A;stroke-width:2.4}
+      .t1{font:900 17px "M PLUS Rounded 1c",sans-serif;fill:#2B2723}
+      .t2{font:700 12px "M PLUS Rounded 1c",sans-serif;fill:#7A7168}
+      .t3{font:900 12px "M PLUS Rounded 1c",sans-serif;fill:#E2643B}
+      .ar{stroke:#B8875A;stroke-width:2.4;fill:none;marker-end:url(#ah)}
+      .arg{stroke:#6E8C5A;stroke-width:2.4;fill:none;marker-end:url(#ah2);stroke-dasharray:7 5}
+    </style>
+
+    <!-- STEP1 platforms -->
+    <rect class="bx" x="36" y="60" width="220" height="120" rx="14"/>
+    <text class="t3" x="52" y="88">STEP 1 ｜ 新規のお客さん</text>
+    <text class="t1" x="52" y="114">プラットフォーム掲載</text>
+    <text class="t2" x="52" y="138">スペースマーケット（本命）</text>
+    <text class="t2" x="52" y="156">＋カシカシ／インスタベース</text>
+
+    <!-- STEP2 room/QR -->
+    <rect class="bx" x="392" y="60" width="216" height="120" rx="14"/>
+    <text class="t3" x="408" y="88">STEP 2 ｜ 部屋の中で</text>
+    <text class="t1" x="408" y="114">QRチラシを置く</text>
+    <text class="t2" x="408" y="138">「次回は直接予約で</text>
+    <text class="t2" x="408" y="156">　同じ部屋がもっと安く」</text>
+
+    <!-- STEP3 own site -->
+    <rect class="bxg" x="744" y="60" width="220" height="120" rx="14"/>
+    <text class="t3" x="760" y="88">STEP 3 ｜ 2回目から</text>
+    <text class="t1" x="760" y="114">自社サイトで直予約</text>
+    <text class="t2" x="760" y="138">手数料ゼロのぶん安くできる</text>
+    <text class="t2" x="760" y="156">＝資料1のページが受け皿</text>
+
+    <!-- STEP4 google -->
+    <rect class="bxg" x="392" y="240" width="216" height="88" rx="14"/>
+    <text class="t3" x="408" y="268">STEP 4 ｜ 並行して</text>
+    <text class="t1" x="408" y="294">Googleマップに登録</text>
+    <text class="t2" x="408" y="314">レビューが自分の資産になる</text>
+
+    <!-- arrows -->
+    <path class="ar" d="M256 120 H384"/>
+    <text class="t2" x="278" y="108">来てもらう</text>
+    <path class="ar" d="M608 120 H736"/>
+    <text class="t2" x="630" y="108">次回から</text>
+    <path class="arg" d="M500 180 V232"/>
+    <text class="t2" x="512" y="212">レビューはこちらへも</text>
+    <path class="arg" d="M392 284 C 200 284 146 240 146 188"/>
+    <text class="t2" x="128" y="322">マップ検索から新規が来る</text>
+  </svg>
+
   <div class="tl">
     <div class="st">
-      <div class="when">今週</div>
-      <b>写真を撮って、1件出す</b>
-      <p>晴れた日の昼に写真5枚。畳の枚数と天井高を測る。スペースマーケットに会員登録して、資料2の文章を貼って掲載する。ここまでで作業は2時間ほどです。</p>
+      <div class="when">STEP 1 ｜ 今週〜</div>
+      <b>複数プラットフォームに同時掲載して、反応を見る</b>
+      <p>スペースマーケットを本命に、カシカシ・インスタベースにも同じ写真と文章で出します（掲載はどれも無料）。1ヶ月は最低価格のまま動かさず、どのサイトから・どの用途で問い合わせが来るかだけ記録。ここでの目的は売上ではなく<b>レビュー集め</b>です。最初の3件は知り合いに実際に使ってもらって、正直に書いてもらいます。</p>
     </div>
     <div class="st later">
-      <div class="when">1ヶ月目</div>
-      <b>最低価格のまま、反応だけ見る</b>
-      <p>1時間1,000円のまま動かさない。問い合わせが何件来たか、どの用途で来たかだけ記録します。最初の3件は知り合いに使ってもらってレビューを付けます。</p>
+      <div class="when">STEP 2 ｜ 初予約が入ったら</div>
+      <b>部屋の中にQRチラシを置いて、次回を自社へ誘う</b>
+      <p>部屋に「次回は直接予約でもっと安く」のチラシとQRを置きます。行き先は資料1の自社ページ。手数料（売上の20〜35%）がないぶん、<b>同じ部屋を安く貸してもこちらの手取りは増える</b>——これがリピーターへのインセンティブです。注意点がひとつ：プラットフォームのメッセージ機能で直予約に誘うのは規約違反になりやすいので、<b>案内は部屋の中だけ</b>で行います。</p>
     </div>
     <div class="st later">
-      <div class="when">2〜3ヶ月目</div>
-      <b>「ひらく日」を月1回はじめる</b>
-      <p>AIの使い方の会でも、エンジニア志望の相談会でもいい。人が来なかった回も「開催した」記録として残します。3回目あたりから景色が変わります。</p>
+      <div class="when">STEP 3 ｜ リピーターが出てきたら</div>
+      <b>自社サイトに予約と決済をつなぐ</b>
+      <p>資料1のページに予約フォームと決済（Stripeなど）をつなぎ、直予約を受けられる状態にします。ここは作る作業なのでユウキ側でやります。プラットフォームは「新規の入口」として残し、常連は自社——の二階建てにするのが完成形です。</p>
     </div>
     <div class="st far">
-      <div class="when">半年後</div>
-      <b>値上げ、または自社サイト直予約へ</b>
-      <p>埋まってきたら時間単価を上げるか、備品を足して単価の高い用途を取る。資料1のページを予約フォームにつなげば、プラットフォーム手数料が手元に戻ります。</p>
+      <div class="when">STEP 4 ｜ 並行して</div>
+      <b>Googleビジネスプロフィールに登録する</b>
+      <p>Googleマップに「こあがり」が出るようにします。ここのレビューは<b>プラットフォームに依存しない自分の資産</b>で、退会しても消えません。「（地名）レンタルスペース」のマップ検索から新規も入ってきます。登録は無料。オーナー確認（はがき等）が要るので、早めに申請だけ済ませておくのがコツです。</p>
     </div>
+  </div>
+
+  <div class="decide" style="margin-top:34px">
+    <h3>🔁 回りはじめると、こうなる</h3>
+    <p style="margin-bottom:0">プラットフォームが新規を連れてくる → 部屋のQRが2回目を自社に呼ぶ → Googleマップのレビューがまた新規を連れてくる。<b>広告費ゼロのまま、レビューだけが積み上がっていく循環</b>です。手数料を払うのは「新規の紹介料」としてだけ、になります。</p>
   </div>
 </div></section>
 
@@ -385,7 +449,8 @@ footer{padding:38px 0 64px;color:var(--sub);font-size:.82rem;border-top:1px soli
       <ul>
         <li>晴れた日の昼に写真を5枚<small>小上がり全景／6畳／玄関／設備／畳の寄り。部屋の角から広く撮るときれいです</small></li>
         <li>畳の枚数と天井の高さを測る<small>掲載時にほぼ必ず聞かれます。5分</small></li>
-        <li>スペースマーケットに会員登録<small>「スペースを掲載する」まで進めばOK</small></li>
+        <li>3つのプラットフォームに会員登録<small>スペースマーケット・カシカシ・インスタベース。「掲載する」まで進めばOK</small></li>
+        <li>Googleビジネスプロフィールを申請<small>よし君のGoogleアカウントで。オーナー確認のはがき待ちがあるので早めに</small></li>
       </ul>
     </div>
     <div class="who">
@@ -401,7 +466,7 @@ footer{padding:38px 0 64px;color:var(--sub);font-size:.82rem;border-top:1px soli
       <ul>
         <li>掲載文とページの作成<small>資料1〜4はすでに完成しています</small></li>
         <li>写真が届いたらページに反映<small>選ばれた案をページ全体に広げます</small></li>
-        <li>掲載作業の伴走<small>詰まったところは一緒に見ます</small></li>
+        <li>QRチラシと予約フォームの実装<small>STEP2のチラシ、STEP3の直予約・決済まわりはこちらで作ります</small></li>
       </ul>
     </div>
   </div>
