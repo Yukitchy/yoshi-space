@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>掲載イメージ — こあがり｜スペース時間貸し</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=M+PLUS+Rounded+1c:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F7F8;--card:#fff;--ink:#232326;--sub:#77767C;--line:#E6E5E9;
+  --brand:#00A0B0;--accent:#E2643B;--tatami:#6E8C5A;
+  --sans:"M PLUS Rounded 1c",-apple-system,"Hiragino Sans",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:500;line-height:1.75}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+.nb{display:inline-block}
+
+.mockbar{background:#2B2723;color:#FFD9A0;font-size:.8rem;font-weight:800;padding:10px 20px;text-align:center;letter-spacing:.01em}
+.mockbar a{color:#fff}
+
+/* fake platform chrome */
+.pnav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
+.pnav .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.plogo{font-family:"Lilita One",var(--sans);font-size:1.3rem;color:var(--brand);letter-spacing:.01em}
+.psearch{flex:1;max-width:420px;background:var(--bg);border:1px solid var(--line);border-radius:999px;
+  padding:8px 16px;font-size:.84rem;color:var(--sub)}
+.pnav .r{margin-left:auto;display:flex;gap:14px;font-size:.82rem;font-weight:700;color:var(--sub);align-items:center}
+.avatar{width:30px;height:30px;border-radius:50%;background:#DCE6CE;display:grid;place-items:center;font-size:.8rem}
+
+.crumb{font-size:.76rem;color:var(--sub);padding:16px 0 12px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;border-radius:14px;overflow:hidden;height:340px}
+@media(max-width:760px){.gal{grid-template-columns:1fr 1fr;height:260px}}
+.ph{position:relative;background-color:#EFE7D8;display:flex;align-items:center;justify-content:center;text-align:center}
+.ph::before{content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,rgba(110,140,90,.10) 0 20px,rgba(110,140,90,0) 20px 22px),
+                   repeating-linear-gradient(0deg,rgba(110,140,90,.10) 0 20px,rgba(110,140,90,0) 20px 22px)}
+.ph i{position:relative;font-style:normal;font-size:.75rem;font-weight:800;color:#A2937C;padding:0 8px}
+.gal .ph:first-child{grid-row:span 2}
+.gal .ph:first-child i{font-size:.92rem}
+
+.cols{display:grid;grid-template-columns:1fr 340px;gap:36px;margin-top:26px;align-items:start;padding-bottom:60px}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+
+h1{font-size:1.7rem;font-weight:900;letter-spacing:-.025em;line-height:1.35;margin:6px 0 8px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:.82rem;color:var(--sub);margin-bottom:22px}
+.newtag{background:#FFF1D6;color:#A96B12;font-weight:900;font-size:.72rem;padding:3px 10px;border-radius:999px}
+.blk{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:16px}
+.blk h2{font-size:1.05rem;font-weight:900;letter-spacing:-.02em;margin-bottom:14px}
+.blk p{font-size:.9rem;color:#4A484E}
+.blk p+p{margin-top:12px}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:#EEF7F8;color:#0B7C88;border-radius:999px;padding:6px 13px;font-size:.79rem;font-weight:800}
+.fac{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+@media(max-width:520px){.fac{grid-template-columns:1fr}}
+.fac div{font-size:.87rem;display:flex;gap:9px;align-items:center}
+.fac .no{color:#B4B2B8;text-decoration:line-through}
+
+table.rate{width:100%;border-collapse:collapse;font-size:.88rem}
+table.rate th,table.rate td{text-align:left;padding:11px 6px;border-bottom:1px solid var(--line)}
+table.rate th{font-size:.76rem;color:var(--sub);font-weight:800}
+table.rate td.p{font-family:"Lilita One",var(--sans);font-size:1.2rem;letter-spacing:0}
+
+/* availability */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center}
+.cal .h{font-size:.7rem;font-weight:900;color:var(--sub);padding-bottom:4px}
+.cal .d{aspect-ratio:1/1;border-radius:9px;display:grid;place-items:center;font-size:.82rem;font-weight:700;
+  background:#F2F7EE;color:#4E6B3D;border:1px solid #E1EBD8}
+.cal .d.x{background:#F4F4F5;color:#BBB9BF;border-color:var(--line)}
+.cal .d.o{background:var(--tatami);color:#fff;border-color:var(--tatami)}
+.legend{display:flex;gap:16px;font-size:.75rem;color:var(--sub);margin-top:12px}
+.legend b{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:-1px;margin-right:5px}
+
+/* sticky booking */
+.book{position:sticky;top:82px;background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:22px;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.book .price{font-family:"Lilita One",var(--sans);font-size:2.1rem;line-height:1.1;letter-spacing:0}
+.book .price small{font-family:var(--sans);font-size:.85rem;font-weight:700;color:var(--sub)}
+.field{margin-top:14px}
+.field label{display:block;font-size:.72rem;font-weight:900;color:var(--sub);margin-bottom:5px;letter-spacing:.04em}
+.field .box{border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:.87rem;font-weight:700}
+.bbtn{display:block;width:100%;text-align:center;background:var(--brand);color:#fff;font-weight:900;font-size:.95rem;
+  padding:14px;border-radius:12px;margin-top:18px;text-decoration:none;border:none;cursor:pointer;font-family:var(--sans)}
+.tot{display:flex;justify-content:space-between;font-size:.85rem;padding:12px 0;margin-top:12px;border-top:1px dashed var(--line)}
+.tot b{font-family:"Lilita One",var(--sans);font-size:1.25rem;letter-spacing:0}
+.host{display:flex;gap:12px;align-items:center;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.host .av{width:42px;height:42px;border-radius:50%;background:#DCE6CE;display:grid;place-items:center;font-size:1.1rem}
+.host div b{display:block;font-size:.88rem;font-weight:900}
+.host div span{font-size:.75rem;color:var(--sub)}
+
+/* checklist */
+.chk{background:#FFF9EE;border:1px solid #F0E2C6;border-radius:16px;padding:22px;margin-top:16px}
+.chk h2{font-size:.98rem;font-weight:900;margin-bottom:12px}
+.chk ol{list-style:none;counter-reset:c}
+.chk li{counter-increment:c;font-size:.85rem;padding:9px 0 9px 34px;position:relative;border-bottom:1px dashed #EFE2C8}
+.chk li:last-child{border:none}
+.chk li::before{content:counter(c);position:absolute;left:0;top:9px;width:22px;height:22px;border-radius:50%;
+  background:var(--accent);color:#fff;font-size:.72rem;font-weight:900;display:grid;place-items:center}
+.chk li b{font-weight:900}
+.back{display:inline-block;margin:24px 0 0;font-size:.85rem;font-weight:800;color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+<div class="mockbar">⚠️ これは <b>掲載イメージのモック</b> です。実在のスペースマーケットのページではありません — <a href="index.html">自社集客ページはこちら</a></div>
+
+<div class="pnav"><div class="wrap">
+  <div class="plogo">spacemarket</div>
+  <div class="psearch">🔍 エリア・目的から探す</div>
+  <div class="r"><span>お気に入り</span><span>予約一覧</span><div class="avatar">🧑</div></div>
+</div></div>
+
+<div class="wrap">
+  <div class="crumb">レンタルスペース ＞ （エリア） ＞ 撮影・施術・レッスン ＞ こあがり</div>
+  <div class="gal">
+    <div class="ph"><i>📷 メイン写真<br>畳の小上がり全景（横位置・明るい時間帯に）</i></div>
+    <div class="ph"><i>📷 6畳スペース</i></div>
+    <div class="ph"><i>📷 施術台を置いた例</i></div>
+    <div class="ph"><i>📷 玄関・入口</i></div>
+    <div class="ph"><i>📷 設備（Wi-Fi/エアコン）</i></div>
+  </div>
+
+  <div class="cols">
+    <div>
+      <div class="meta" style="margin:16px 0 0"><span class="newtag">NEW 掲載したばかり</span><span>👥 定員6名</span><span>📐 畳の小上がり＋6畳</span><span>🚶 （最寄駅・徒歩◯分）</span></div>
+      <h1><span class="nb">畳の小上がりがある一軒家の1階。</span><span class="nb">施術・少人数レッスン・ママ会に。</span></h1>
+
+      <div class="blk">
+        <h2>スペースについて</h2>
+        <p>一軒家の1階、畳の小上がりと6畳ほどのフリースペースをまるごと貸し切りでご利用いただけます。生活音のない静かな住宅街で、カフェや会議室にはない「誰かの家に上がる」空気感が特徴です。</p>
+        <p>お店を持つ前の施術者さん、少人数の教室、小さなお子さん連れの集まりに向いています。畳なのでベビーマットを敷けば、床に寝かせたままの会も安心です。</p>
+        <p><b>入口は玄関ひとつ（住まいと共用）です。</b>ご到着・ご退出のタイミングでご挨拶することがありますが、ご利用中に室内へ立ち入ることはありません。</p>
+      </div>
+
+      <div class="blk">
+        <h2>利用目的</h2>
+        <div class="tags">
+          <span class="tag">マッサージ・整体</span><span class="tag">ネイル・まつげ</span><span class="tag">書道・お茶</span>
+          <span class="tag">ワークショップ</span><span class="tag">勉強会・セミナー</span><span class="tag">ママ会</span>
+          <span class="tag">上映会</span><span class="tag">撮影</span><span class="tag">おしゃべり会</span>
+        </div>
+      </div>
+
+      <div class="blk">
+        <h2>設備・アメニティ</h2>
+        <div class="fac">
+          <div>✅ Wi-Fi（無料）</div><div>✅ 電源・コンセント</div>
+          <div>✅ エアコン</div><div>✅ トイレ</div>
+          <div>✅ 座布団</div><div>✅ 折りたたみ机</div>
+          <div class="no">❌ キッチン（調理）</div><div class="no">❌ 宿泊</div>
+          <div class="no">❌ 駐車場</div><div class="no">❌ 専用入口</div>
+        </div>
+        <p style="font-size:.78rem;color:var(--sub);margin-top:14px">※ 掲載時にプロジェクター・姿見を足すと「上映会」「ネイル」の検索に載りやすくなります。</p>
+      </div>
+
+      <div class="blk">
+        <h2>料金</h2>
+        <table class="rate">
+          <tr><th>プラン</th><th>平日</th><th>土日祝</th></tr>
+          <tr><td>1時間</td><td class="p">¥1,000</td><td class="p">¥1,200</td></tr>
+          <tr><td>3時間パック</td><td class="p">¥2,700</td><td class="p">¥3,300</td></tr>
+          <tr><td>半日（6時間）</td><td class="p">¥5,000</td><td class="p">¥6,000</td></tr>
+        </table>
+        <p style="font-size:.8rem;color:var(--sub);margin-top:12px">最低利用時間 1時間／延長は30分単位。キャンセル: 前々日まで無料・前日50%・当日100%</p>
+      </div>
+
+      <div class="blk">
+        <h2>空き状況</h2>
+        <div class="cal">
+          <div class="h">月</div><div class="h">火</div><div class="h">水</div><div class="h">木</div><div class="h">金</div><div class="h">土</div><div class="h">日</div>
+          <div class="d x">1</div><div class="d">2</div><div class="d">3</div><div class="d o">4</div><div class="d">5</div><div class="d o">6</div><div class="d">7</div>
+          <div class="d x">8</div><div class="d">9</div><div class="d o">10</div><div class="d">11</div><div class="d">12</div><div class="d o">13</div><div class="d o">14</div>
+          <div class="d x">15</div><div class="d">16</div><div class="d">17</div><div class="d">18</div><div class="d o">19</div><div class="d">20</div><div class="d">21</div>
+          <div class="d x">22</div><div class="d o">23</div><div class="d">24</div><div class="d">25</div><div class="d">26</div><div class="d o">27</div><div class="d">28</div>
+        </div>
+        <div class="legend"><span><b style="background:#F2F7EE;border:1px solid #E1EBD8"></b>空きあり</span>
+          <span><b style="background:#6E8C5A"></b>予約済み</span>
+          <span><b style="background:#F4F4F5;border:1px solid #E6E5E9"></b>貸出しない日</span></div>
+        <p style="font-size:.78rem;color:var(--sub);margin-top:12px">↑ 月曜を「貸さない日」にしておくと、掃除と自分たちの生活が守れます。埋まってきたら解放。</p>
+      </div>
+
+      <div class="blk">
+        <h2>レビュー</h2>
+        <p style="color:var(--sub)">まだレビューはありません。最初の3件は、知り合いに実際に使ってもらって正直に書いてもらうのが近道です。</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="book">
+        <div class="price">¥1,000<small> / 時間〜</small></div>
+        <div class="field"><label>利用日</label><div class="box">2026 / 09 / 06（土）</div></div>
+        <div class="field"><label>時間</label><div class="box">13:00 〜 15:00（2時間）</div></div>
+        <div class="field"><label>人数</label><div class="box">3名</div></div>
+        <div class="tot"><span>合計（税込・手数料込）</span><b>¥2,640</b></div>
+        <button class="bbtn">予約リクエストを送る</button>
+        <div class="host">
+          <div class="av">🏡</div>
+          <div><b>ホスト：よし＆きょうこ</b><span>ふたりで運営しています・返信は当日中</span></div>
+        </div>
+      </div>
+
+      <div class="chk">
+        <h2>📋 このページを本物にする手順</h2>
+        <ol>
+          <li><b>写真を5枚撮る</b>／晴れた日の昼、部屋の角から広く。1枚目が全て</li>
+          <li><b>寸法を測る</b>／畳の枚数・天井高・入口の幅</li>
+          <li><b>スペースマーケットに会員登録</b>→「スペースを掲載する」</li>
+          <li><b>このページの文章をコピペ</b>して貼る（そのまま使えます）</li>
+          <li><b>1ヶ月だけ最低価格で出す</b>／反応を見て値上げ</li>
+          <li><b>最初の3件</b>は知り合いに使ってもらってレビューを付ける</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <a class="back" href="index.html">← 自社集客ページに戻る</a>
+</div>
+<script src="devbar.js"></script>
+</body>
+</html>
