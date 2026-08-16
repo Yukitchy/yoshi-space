@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>見た目5案 — こあがり計画</title>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=M+PLUS+Rounded+1c:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF7EF;--card:#fff;--ink:#2B2723;--sub:#7A7168;--line:#E8DFCF;
+  --tatami:#6E8C5A;--accent:#E2643B;--wood2:#B8875A;
+  --sans:"M PLUS Rounded 1c",-apple-system,"Hiragino Sans",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:500;line-height:1.8}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+.nb{display:inline-block;white-space:nowrap}
+
+nav{position:sticky;top:0;z-index:60;background:rgba(251,247,239,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:16px;height:58px;font-size:.84rem;font-weight:800}
+nav .home{font-weight:900;letter-spacing:-.02em;text-decoration:none}
+nav .sp{flex:1}
+nav a.nl{color:var(--sub);text-decoration:none}
+nav a.nl.on{color:var(--accent)}
+
+header{padding:56px 0 34px}
+.kick{font-size:.74rem;font-weight:900;letter-spacing:.18em;color:var(--accent);margin-bottom:8px}
+h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:700;letter-spacing:-.025em;line-height:1.28;margin-bottom:16px}
+.lead{font-size:1rem;color:var(--sub);max-width:38em}
+.warn{background:#FFF9EE;border:1px solid #F0E2C6;border-radius:14px;padding:16px 20px;margin-top:22px;font-size:.88rem}
+.warn b{font-weight:900}
+
+/* switcher */
+.tabs{position:sticky;top:58px;z-index:55;background:rgba(251,247,239,.95);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);padding:12px 0}
+.tabs .wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tab{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:.86rem;
+  font-weight:800;cursor:pointer;font-family:var(--sans);color:var(--ink);white-space:nowrap;transition:.14s}
+.tab:hover{border-color:var(--wood2)}
+.tab.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.tab i{font-style:normal;font-family:"Lilita One",var(--sans);margin-right:6px;color:var(--accent)}
+.tab.on i{color:#F5B34A}
+.tabs .sp{flex:1}
+.dev{display:flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px}
+.dev button{border:none;background:transparent;border-radius:999px;padding:6px 14px;font-size:.78rem;font-weight:800;
+  cursor:pointer;font-family:var(--sans);color:var(--sub)}
+.dev button.on{background:var(--ink);color:#fff}
+
+/* stage */
+.stage{padding:26px 0 10px}
+.meta{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start;margin-bottom:18px}
+@media(max-width:860px){.meta{grid-template-columns:1fr}}
+.meta h2{font-size:1.7rem;font-weight:900;letter-spacing:-.025em;line-height:1.3}
+.meta .tl{font-size:.75rem;font-weight:900;letter-spacing:.14em;color:var(--accent);margin-bottom:4px}
+.meta p{font-size:.92rem;color:var(--sub);margin-top:8px}
+.from{background:#F4F8EF;border-left:3px solid var(--tatami);border-radius:0 12px 12px 0;padding:14px 16px}
+.from b{display:block;font-size:.68rem;font-weight:900;color:var(--tatami);letter-spacing:.1em;margin-bottom:6px}
+.from p{font-size:.85rem;margin:0}
+.from .src{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.from .src span{background:#fff;border:1px solid #D3E0C4;border-radius:999px;padding:3px 10px;font-size:.72rem;font-weight:800;color:#4E6B3D}
+
+.viewport{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  box-shadow:0 12px 34px rgba(43,39,35,.08);transition:max-width .2s;margin:0 auto}
+.viewport.mobile{max-width:400px;border-radius:26px}
+.viewport iframe{width:100%;height:740px;border:none;display:block;background:#fff}
+.hint{text-align:center;font-size:.78rem;color:var(--sub);padding:12px 0 0}
+.hint a{font-weight:800;color:var(--accent);text-decoration:none}
+
+/* compare */
+section{padding:56px 0;border-top:1px solid var(--line);margin-top:44px}
+h3{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.025em;margin-bottom:10px}
+.sec-sub{color:var(--sub);font-size:.96rem;margin-bottom:28px;max-width:38em}
+.wrapx{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.88rem;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;min-width:720px}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;color:var(--sub);font-weight:900;letter-spacing:.08em;background:#F7F2E8;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td b{font-weight:900}
+td .an{font-family:"Lilita One",var(--sans);color:var(--accent);font-size:1.05rem;letter-spacing:0}
+
+.final{background:var(--tatami);color:#fff;border-radius:24px;padding:46px 40px;text-align:center}
+.final h3{color:#fff}
+.final p{color:#DDE8D2;max-width:32em;margin:0 auto 24px}
+.btn{display:inline-block;background:#fff;color:var(--tatami);text-decoration:none;font-weight:900;
+  padding:14px 26px;border-radius:999px;font-size:.95rem;box-shadow:0 6px 16px rgba(0,0,0,.16)}
+footer{padding:36px 0 60px;color:var(--sub);font-size:.8rem}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="home" href="index.html">← こあがり計画</a>
+  <div class="sp"></div>
+  <a class="nl" href="customer.html">集客ページ</a>
+  <a class="nl" href="listing.html">掲載イメージ</a>
+  <a class="nl" href="research.html">競合分析</a>
+  <a class="nl on" href="designs.html">見た目5案</a>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="kick">PICK ONE ／ 見た目えらび</div>
+  <h1><span class="nb">集客ページの見た目、</span><span class="nb">5案つくりました。</span></h1>
+  <p class="lead">競合6サイトから1つずつ「効いていたところ」を持ってきて、別々の方向に振った5案です。下のボタンで切り替えて、ふたりで見比べてください。全部却下でもかまいません。</p>
+  <div class="warn">🖼 <b>写真はまだ線画イラストです。</b>よし君の写真が入ると、どの案も別物に見えます。いま選ぶのは「写真の見せ方」と「words の並べ方」だと思って見てください。</div>
+</div></header>
+
+<div class="tabs"><div class="wrap">
+  <button class="tab on" data-k="a"><i>A</i>その日の風景</button>
+  <button class="tab" data-k="b"><i>B</i>しずかな一軒家</button>
+  <button class="tab" data-k="c"><i>C</i>ふたりが主役</button>
+  <button class="tab" data-k="d"><i>D</i>目的から選ぶ</button>
+  <button class="tab" data-k="e"><i>E</i>ぜんぶ言い切る</button>
+  <div class="sp"></div>
+  <div class="dev">
+    <button class="on" data-w="full">PC</button>
+    <button data-w="mobile">スマホ</button>
+  </div>
+</div></div>
+
+<div class="stage"><div class="wrap">
+  <div class="meta">
+    <div>
+      <div class="tl" id="mTl">案 A</div>
+      <h2 id="mTitle">その日の風景を、まず見せる。</h2>
+      <p id="mDesc"></p>
+    </div>
+    <div class="from">
+      <b>どこから盗んだか</b>
+      <p id="mFrom"></p>
+      <div class="src" id="mSrc"></div>
+    </div>
+  </div>
+  <div class="viewport" id="vp"><iframe id="fr" src="d/a.html" title="デザイン案"></iframe></div>
+  <p class="hint"><a id="openNew" href="d/a.html" target="_blank" rel="noopener">この案だけを新しいタブで開く ↗</a></p>
+</div></div>
+
+<section><div class="wrap">
+  <h3>5案のちがい、ひと目で。</h3>
+  <p class="sec-sub">迷ったら「最初のお客さんは誰か」で選ぶのがいちばん早いです。</p>
+  <div class="wrapx"><table>
+    <tr><th>案</th><th>ひとことで</th><th>いちばん効く相手</th><th>必要な写真</th><th>弱いところ</th></tr>
+    <tr><td><span class="an">A</span> その日の風景</td><td>全画面の写真1枚で「ここでこう過ごす」を見せる</td><td>雰囲気で決める人・撮影や集まり系</td><td><b>横位置の良い写真が1枚必須</b>。ここが弱いと全部崩れる</td><td>写真の質にすべてが乗る</td></tr>
+    <tr><td><span class="an">B</span> しずかな一軒家</td><td>余白と縦書き。文字を減らして「良さそう」だけ残す</td><td>作品性のある教室・お茶・書道</td><td>1枚。ただし整った構図が要る</td><td>何ができる場所か伝わるのが遅い</td></tr>
+    <tr><td><span class="an">C</span> ふたりが主役</td><td>よし＆きょうこの顔と人柄を前に出す</td><td>初めての人・子連れ・近所の人</td><td>ふたりの写真が要る（顔出しの覚悟）</td><td>顔出ししたくない場合は成立しない</td></tr>
+    <tr><td><span class="an">D</span> 目的から選ぶ</td><td>用途タイルを並べて、入口を先に割る</td><td>「何に使えるの？」と迷っている人</td><td>用途ごとに8枚ほしい（後から足せる）</td><td>写真が揃うまで少しさみしい</td></tr>
+    <tr><td><span class="an">E</span> ぜんぶ言い切る</td><td>広さ・入口・できないことを表で先に出す</td><td>施術者・講師など、条件で選ぶプロ</td><td>1〜2枚で足りる（今すぐ出せる）</td><td>ときめきは薄い。実務的すぎる</td></tr>
+  </table></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="final">
+    <h3>気になったアルファベットを、1文字だけ返してください。</h3>
+    <p>「Aだけど写真が不安」「CとEの間がいい」みたいな返事でも大丈夫です。決まったら、選ばれた1案をページ全体に広げます。</p>
+    <a class="btn" href="index.html">計画のトップに戻る</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">見た目5案 — 2026-08-16／写真は仮の線画イラストです</div></footer>
+
+<script>
+const D={
+ a:{tl:'案 A',t:'その日の風景を、まず見せる。',
+    d:'画面いっぱいの写真の上に、大きな見出しと予約バー。部屋のスペックより先に「ここで過ごす自分」を想像させる作り。5社のなかでいちばん強い王道です。',
+    f:'Peerspaceのヒーローをそのまま。空っぽの部屋ではなく「使っている風景」を全画面で置き、検索バーを写真の上に浮かせています。',
+    s:['Peerspace','スペースマーケット']},
+ b:{tl:'案 B',t:'説明を減らして、余白で語る。',
+    d:'写真を中央に1枚だけ。縦書きの一言と、余白の多い組み方で「静かで良さそうな場所」を作ります。読ませるより、感じさせる方向。',
+    f:'yosuga akiu（仙台・秋保の一軒家）の構成。写真1枚で押し切り、説明は下に小さくまとめる潔さを借りました。',
+    s:['yosuga akiu']},
+ c:{tl:'案 C',t:'場所ではなく、ふたりを売る。',
+    d:'よし＆きょうこが運営していることを最初に出します。手描き感のある枠と色で親しみを作る方向。近所の人・子連れにいちばん効きます。',
+    f:'スタジオあかり（二児ママカメラマンのおうちスタジオ）から。個人がやっていることを隠さず前に出す作りを借りました。',
+    s:['スタジオあかり']},
+ d:{tl:'案 D',t:'「何に使えるか」から入らせる。',
+    d:'用途タイルを最初に並べ、検索窓風のバーで目的を選ばせます。迷っている人がいちばん動きやすい形。タイルは後から写真に差し替えられます。',
+    f:'カシカシの「目的から探す」タイルと、インスタベースの具体タグを合わせたもの。プラットフォーム側の入口の割り方をそのまま自社サイトに持ってきています。',
+    s:['カシカシ','インスタベース']},
+ e:{tl:'案 E',t:'先に、全部書いてしまう。',
+    d:'広さ・入口・できないことを表で先出し。読み物のような編集寄りの組み方で、条件で選ぶプロにいちばん刺さります。写真が1枚でも成立するのが強み。',
+    f:'インスタベースの具体タグを「検索で見つけてもらう言葉」として下に敷き、スペースマーケットのカテゴリ語を表に流用しています。',
+    s:['インスタベース','スペースマーケット']}
+};
+const tabs=document.querySelectorAll('.tab'), fr=document.getElementById('fr'), vp=document.getElementById('vp');
+function show(k){
+  const o=D[k];
+  fr.src='d/'+k+'.html';
+  document.getElementById('openNew').href='d/'+k+'.html';
+  mTl.textContent=o.tl; mTitle.textContent=o.t; mDesc.textContent=o.d; mFrom.textContent=o.f;
+  mSrc.innerHTML=o.s.map(x=>'<span>'+x+'</span>').join('');
+  tabs.forEach(t=>t.classList.toggle('on',t.dataset.k===k));
+}
+tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.k)));
+document.querySelectorAll('.dev button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.dev button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); vp.classList.toggle('mobile',b.dataset.w==='mobile');
+}));
+show('a');
+</script>
+</body>
+</html>

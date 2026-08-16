@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 810" width="1440" height="810">
+  <defs>
+    <style>
+      .l{fill:none;stroke:#B8875A;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+      .t{fill:none;stroke:#B8875A;stroke-width:1.3;opacity:.5}
+      .f{fill:#F0E6D4}
+      .g{fill:#DCE6CE}
+      .w{fill:#FFFDF8}
+    </style>
+  </defs>
+
+  <rect width="1440" height="810" fill="#FBF5EA"/>
+  <!-- wall -->
+  <path class="w" d="M0 0h1440v475H0z"/>
+  <!-- floor -->
+  <path class="f" d="M0 475h1440v335H0z"/>
+  <line class="l" x1="0" y1="475" x2="1440" y2="475"/>
+  <line class="t" x1="0" y1="521" x2="1440" y2="521"/>
+
+  <!-- extra shoji far left -->
+  <rect class="w" x="-10" y="150" width="210" height="290" rx="3"/>
+  <rect class="l" x="-10" y="150" width="210" height="290" rx="3"/>
+  <g class="t">
+    <line x1="95" y1="150" x2="95" y2="440"/>
+    <line x1="-10" y1="222" x2="200" y2="222"/>
+    <line x1="-10" y1="295" x2="200" y2="295"/>
+    <line x1="-10" y1="367" x2="200" y2="367"/>
+  </g>
+
+  <g transform="translate(320,145)">
+    <!-- shoji screens (right) -->
+    <rect class="w" x="430" y="58" width="322" height="256" rx="3"/>
+    <rect class="l" x="430" y="58" width="322" height="256" rx="3"/>
+    <g class="t">
+      <line x1="591" y1="58" x2="591" y2="314"/>
+      <line x1="430" y1="122" x2="752" y2="122"/>
+      <line x1="430" y1="186" x2="752" y2="186"/>
+      <line x1="430" y1="250" x2="752" y2="250"/>
+      <line x1="510" y1="58" x2="510" y2="314"/>
+      <line x1="671" y1="58" x2="671" y2="314"/>
+    </g>
+
+    <!-- hanging scroll -->
+    <rect class="l" x="112" y="76" width="66" height="130" rx="2"/>
+    <path class="t" d="M132 116c8 14 4 30 -2 44M148 106c10 20 6 44 -2 62"/>
+
+    <!-- pendant lamp -->
+    <line class="l" x1="300" y1="-145" x2="300" y2="52"/>
+    <path class="l" d="M258 96c0-24 19-44 42-44s42 20 42 44z"/>
+    <line class="t" x1="258" y1="96" x2="342" y2="96"/>
+
+    <!-- koagari raised tatami platform -->
+    <path class="g" d="M40 268h360v62H40z"/>
+    <path class="l" d="M40 268h360v62H40z"/>
+    <path class="f" d="M40 330h360v46H40z"/>
+    <path class="l" d="M40 330h360v46H40z"/>
+    <g class="t">
+      <line x1="160" y1="268" x2="160" y2="330"/>
+      <line x1="280" y1="268" x2="280" y2="330"/>
+      <line x1="40" y1="299" x2="400" y2="299"/>
+    </g>
+
+    <!-- zabuton cushions -->
+    <path class="w" d="M92 300c0-10 9-17 24-17s24 7 24 17-9 16-24 16-24-6-24-16z"/>
+    <path class="l" d="M92 300c0-10 9-17 24-17s24 7 24 17-9 16-24 16-24-6-24-16z"/>
+    <path class="w" d="M310 300c0-10 9-17 24-17s24 7 24 17-9 16-24 16-24-6-24-16z"/>
+    <path class="l" d="M310 300c0-10 9-17 24-17s24 7 24 17-9 16-24 16-24-6-24-16z"/>
+
+    <!-- chabudai -->
+    <ellipse class="w" cx="222" cy="286" rx="78" ry="20"/>
+    <ellipse class="l" cx="222" cy="286" rx="78" ry="20"/>
+    <line class="l" x1="188" y1="300" x2="184" y2="320"/>
+    <line class="l" x1="256" y1="300" x2="260" y2="320"/>
+    <path class="l" d="M200 280h20v-9h-20z"/>
+    <path class="l" d="M234 280h18v-8h-18z"/>
+  </g>
+
+  <!-- plant right -->
+  <path class="l" d="M1236 640h62l-9 66h-44z"/>
+  <path class="l" d="M1267 640c0-46 15-72 37-85M1267 640c0-37-13-59-33-70M1267 640c2-26 17-42 37-46"/>
+
+  <!-- floor cushion left -->
+  <ellipse class="w" cx="196" cy="666" rx="86" ry="24"/>
+  <ellipse class="l" cx="196" cy="666" rx="86" ry="24"/>
+
+  <!-- stack of books -->
+  <path class="l" d="M1080 596h74v14h-74zM1086 582h64v14h-64zM1092 568h54v14h-54z"/>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <style>
+      .l{fill:none;stroke:#B8875A;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+      .t{fill:none;stroke:#B8875A;stroke-width:1.3;opacity:.55}
+      .f{fill:#F3EBDC}
+      .g{fill:#DCE6CE}
+      .w{fill:#FFFDF8}
+    </style>
+  </defs>
+
+  <rect width="800" height="520" fill="#FBF5EA"/>
+
+  <!-- back wall -->
+  <path class="w" d="M0 0h800v330H0z"/>
+
+  <!-- shoji screens (right) -->
+  <rect class="w" x="430" y="58" width="322" height="256" rx="3"/>
+  <rect class="l" x="430" y="58" width="322" height="256" rx="3"/>
+  <g class="t">
+    <line x1="591" y1="58" x2="591" y2="314"/>
+    <line x1="430" y1="122" x2="752" y2="122"/>
+    <line x1="430" y1="186" x2="752" y2="186"/>
+    <line x1="430" y1="250" x2="752" y2="250"/>
+    <line x1="510" y1="58" x2="510" y2="314"/>
+    <line x1="671" y1="58" x2="671" y2="314"/>
+  </g>
+
+  <!-- wall art / small window (left) -->
+  <rect class="l" x="82" y="86" width="118" height="88" rx="4"/>
+  <path class="t" d="M92 158l30-34 22 24 18-20 28 30"/>
+  <circle class="t" cx="112" cy="110" r="9"/>
+
+  <!-- pendant lamp -->
+  <line class="l" x1="300" y1="0" x2="300" y2="52"/>
+  <path class="l" d="M258 96c0-24 19-44 42-44s42 20 42 44z"/>
+  <line class="t" x1="258" y1="96" x2="342" y2="96"/>
+
+  <!-- floor -->
+  <path class="f" d="M0 330h800v190H0z"/>
+  <line class="l" x1="0" y1="330" x2="800" y2="330"/>
+
+  <!-- koagari raised tatami platform (left) -->
+  <path class="g" d="M40 268h360v62H40z"/>
+  <path class="l" d="M40 268h360v62H40z"/>
+  <path class="f" d="M40 330h360v46H40z"/>
+  <path class="l" d="M40 330h360v46H40z"/>
+  <g class="t">
+    <line x1="160" y1="268" x2="160" y2="330"/>
+    <line x1="280" y1="268" x2="280" y2="330"/>
+    <line x1="40" y1="299" x2="400" y2="299"/>
+  </g>
+
+  <!-- zabuton cushions on the platform -->
+  <path class="w" d="M92 300c0-10 9-17 24-17s24 7 24 17-9 16-24 16-24-6-24-16z"/>
+  <path class="l" d="M92 300c0-10 9-17 24-17s24 7 24 17-9 16-24 16-24-6-24-16z"/>
+  <path class="w" d="M310 300c0-10 9-17 24-17s24 7 24 17-9 16-24 16-24-6-24-16z"/>
+  <path class="l" d="M310 300c0-10 9-17 24-17s24 7 24 17-9 16-24 16-24-6-24-16z"/>
+
+  <!-- chabudai (low round table) on the platform -->
+  <ellipse class="w" cx="222" cy="286" rx="78" ry="20"/>
+  <ellipse class="l" cx="222" cy="286" rx="78" ry="20"/>
+  <line class="l" x1="188" y1="300" x2="184" y2="320"/>
+  <line class="l" x1="256" y1="300" x2="260" y2="320"/>
+
+  <!-- teacups on the table -->
+  <path class="l" d="M200 280h20v-9h-20z"/>
+  <path class="l" d="M234 280h18v-8h-18z"/>
+
+  <!-- plant -->
+  <path class="l" d="M640 442h56l-8 60h-40z"/>
+  <path class="l" d="M668 442c0-42 14-66 34-78M668 442c0-34-12-54-30-64M668 442c2-24 16-38 34-42"/>
+
+  <!-- baseboard shadow -->
+  <line class="t" x1="0" y1="376" x2="800" y2="376"/>
+</svg>

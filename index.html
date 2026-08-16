@@ -69,8 +69,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;heigh
 .note{font-size:.78rem;color:#9A9587;margin-top:16px;line-height:1.75}
 
 /* deliverable cards */
-.decks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:900px){.decks{grid-template-columns:1fr}}
+.decks{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:1000px){.decks{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.decks{grid-template-columns:1fr}}
 .deck{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;
   text-decoration:none;display:flex;flex-direction:column;transition:transform .16s,box-shadow .16s}
 .deck:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(43,39,35,.10)}
@@ -79,6 +80,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;heigh
 .deck:nth-child(1) .top{background:#F2F7EE}
 .deck:nth-child(2) .top{background:#EAF6F7}
 .deck:nth-child(3) .top{background:#FDF2EC}
+.deck:nth-child(4) .top{background:#FBF0F6}
 .deck .num{position:absolute;top:12px;left:14px;font-family:"Lilita One",var(--sans);font-size:1.1rem;color:var(--wood2)}
 .deck .bd{padding:22px;flex:1;display:flex;flex-direction:column}
 .deck h3{font-size:1.16rem;font-weight:900;letter-spacing:-.02em;margin-bottom:8px}
@@ -127,6 +129,7 @@ footer{padding:38px 0 62px;color:var(--sub);font-size:.82rem}
   <a class="nl" href="customer.html">集客ページ</a>
   <a class="nl" href="listing.html">掲載イメージ</a>
   <a class="nl" href="research.html">競合分析</a>
+  <a class="nl" href="designs.html">見た目5案</a>
 </div></nav>
 
 <header><div class="wrap">
@@ -201,6 +204,14 @@ footer{padding:38px 0 62px;color:var(--sub);font-size:.82rem}
         <h3>競合5社のいいとこ取り</h3>
         <p>うまくいっている6サイトを実際に見に行って撮影。何を真似して、何をやらないかまで決めてあります。</p>
         <div class="go">見てみる →</div>
+      </div>
+    </a>
+    <a class="deck" href="designs.html">
+      <div class="top"><span class="num">04</span><span class="em">🎨</span></div>
+      <div class="bd">
+        <h3>見た目5案（えらんでください）</h3>
+        <p>競合から1つずつ盗んで、別々の方向に振った5案。切り替えて見比べられます。気になった1文字を返してもらえれば、それで進めます。</p>
+        <div class="go">えらぶ →</div>
       </div>
     </a>
   </div>

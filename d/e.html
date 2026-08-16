@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E案 ぜんぶ言い切る — こあがり</title>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=M+PLUS+Rounded+1c:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F1EA;--ink:#1F1D1A;--sub:#79746B;--line:#DED8CB;--ink2:#2C4A3B;--acc:#C9502F;
+  --sans:"M PLUS Rounded 1c",-apple-system,"Hiragino Sans",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);font-weight:500;line-height:1.8;color:var(--ink);background:var(--bg)}
+a{color:inherit;text-decoration:none}
+.nb{display:inline-block;white-space:nowrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+
+.top{border-bottom:2px solid var(--ink)}
+.top .wrap{display:flex;align-items:center;gap:16px;height:58px}
+.logo{font-weight:900;font-size:1.16rem;letter-spacing:-.02em}
+.top .sp{flex:1}
+.top a{font-size:.8rem;font-weight:800;color:var(--sub)}
+
+/* editorial hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:2px solid var(--ink)}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.hl{padding:44px 26px 40px;display:flex;flex-direction:column;justify-content:center;border-right:2px solid var(--ink)}
+@media(max-width:860px){.hl{border-right:none;border-bottom:2px solid var(--ink)}}
+.hl .no{font-family:"Lilita One",var(--sans);font-size:.9rem;letter-spacing:.1em;color:var(--acc)}
+h1{font-size:clamp(1.9rem,4.2vw,2.9rem);font-weight:800;letter-spacing:-.03em;line-height:1.32;margin:10px 0 16px}
+.hl p{font-size:.95rem;color:var(--sub);max-width:26em}
+.hr{position:relative;background:#EDE8DD;display:grid;place-items:center;padding:20px}
+.hr img{width:100%;max-width:520px;display:block}
+
+/* the honest table */
+.tbl{border-bottom:2px solid var(--ink)}
+.tbl .wrap{padding:0}
+.row{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid var(--line)}
+@media(max-width:700px){.row{grid-template-columns:1fr}}
+.row:last-child{border-bottom:none}
+.row .k{padding:18px 26px;font-size:.78rem;font-weight:900;letter-spacing:.1em;color:var(--ink2);
+  background:#EDE8DD;display:flex;align-items:center}
+.row .v{padding:18px 26px;font-size:.93rem}
+.row .v b{font-weight:900}
+.row .v small{display:block;font-size:.8rem;color:var(--sub);margin-top:3px}
+
+/* price band */
+.band{background:var(--ink2);color:#F2EFE7;padding:38px 0}
+.band .wrap{display:flex;gap:36px;align-items:flex-end;flex-wrap:wrap;justify-content:space-between}
+.band .p{display:flex;gap:34px;flex-wrap:wrap}
+.band .p div b{display:block;font-family:"Lilita One",var(--sans);font-size:2.2rem;line-height:1;color:#F0B851;letter-spacing:0}
+.band .p div span{font-size:.78rem;font-weight:800;opacity:.8}
+.band .btn{background:#F0B851;color:var(--ink);font-weight:900;padding:15px 30px;font-size:.94rem;border-radius:2px}
+
+/* tag cloud */
+.cloud{padding:40px 0 60px}
+.cloud h2{font-size:1.08rem;font-weight:900;letter-spacing:-.02em;margin-bottom:4px}
+.cloud .s{font-size:.85rem;color:var(--sub);margin-bottom:16px}
+.cl{display:flex;flex-wrap:wrap;gap:9px}
+.cl span{border:1.5px solid var(--ink);border-radius:2px;padding:7px 14px;font-size:.84rem;font-weight:800;background:#fff}
+.cl span.o{background:var(--ink);color:#F4F1EA}
+</style></head><body>
+<div class="top"><div class="wrap">
+  <div class="logo">こあがり ／ KOAGARI</div><div class="sp"></div>
+  <a>できること</a><a>料金</a><a>この部屋のこと</a><a>予約</a>
+</div></div>
+
+<div class="hero">
+  <div class="hl">
+    <div class="no">A SMALL ROOM FOR RENT — 01</div>
+    <h1><span class="nb">畳の部屋がひとつ。</span><br><span class="nb">できることは、</span><span class="nb">ぜんぶ書きました。</span></h1>
+    <p>広さも、入口の数も、できないことも先に書いてあります。来てから「思っていたのと違う」が起きないように。</p>
+  </div>
+  <div class="hr"><img src="../room.svg" alt="畳の小上がりのある部屋"></div>
+</div>
+
+<div class="tbl"><div class="wrap">
+  <div class="row"><div class="k">ひろさ</div><div class="v"><b>畳の小上がり＋6畳ほど</b><small>ゆったり4〜6名／詰めて8名まで</small></div></div>
+  <div class="row"><div class="k">いりぐち</div><div class="v"><b>玄関ひとつ・住まいと共用</b><small>到着と退出のときにご挨拶します。利用中に立ち入ることはありません</small></div></div>
+  <div class="row"><div class="k">できること</div><div class="v">マッサージ・ネイルなどの施術／書道・お茶・AI講座などの教室／ママ会・上映会・撮影</div></div>
+  <div class="row"><div class="k">できないこと</div><div class="v"><b>宿泊・調理・大音量</b><small>お茶とお菓子の持ち込みはOKです</small></div></div>
+  <div class="row"><div class="k">あるもの</div><div class="v">Wi-Fi／電源／エアコン／トイレ／座布団／折りたたみ机</div></div>
+</div></div>
+
+<div class="band"><div class="wrap">
+  <div class="p">
+    <div><b>¥1,000</b><span>1時間</span></div>
+    <div><b>¥2,700</b><span>3時間パック</span></div>
+    <div><b>¥5,000</b><span>半日（6時間）</span></div>
+  </div>
+  <span class="btn">空き状況をみる</span>
+</div></div>
+
+<div class="wrap cloud">
+  <h2>こんな言葉で探している人へ</h2>
+  <div class="s">検索で見つけてもらうために、思いつくかぎり書き出しました。</div>
+  <div class="cl">
+    <span class="o">和室</span><span class="o">マッサージ・施術</span><span class="o">ママ会</span><span>ネイル</span><span>書道教室</span>
+    <span>少人数セミナー</span><span>もくもく会</span><span>推し会・オタ会</span><span>ボードゲーム</span><span>上映会</span>
+    <span>撮影スタジオ</span><span>ベビーOK</span><span>貸し切り</span><span>一軒家</span><span>畳</span><span>3時間パック</span>
+  </div>
+</div>
+</body></html>
