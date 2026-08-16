@@ -58,6 +58,89 @@ h1 .bl{color:var(--blue)}
 .u:nth-child(1){border-color:var(--pink)}
 .u:nth-child(2){border-color:var(--blue)}
 .u:nth-child(3){border-color:var(--green)}
+
+/* sections */
+.sec{padding-bottom:56px}
+.sech{text-align:center;margin-bottom:26px}
+.sech .kicker{display:inline-block;background:var(--yellow);border:2px solid var(--ink);border-radius:4px;
+  padding:4px 14px;font-size:.76rem;font-weight:900;transform:rotate(-2deg);margin-bottom:10px}
+.sech h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:900;letter-spacing:-.02em;line-height:1.4}
+
+/* room */
+.room{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:760px){.room{grid-template-columns:1fr}}
+.bubble{position:relative;background:#fff;border:3px solid var(--ink);border-radius:20px;padding:20px 22px;
+  box-shadow:4px 4px 0 rgba(46,42,37,.14)}
+.bubble:after{content:"";position:absolute;bottom:-14px;left:34px;width:22px;height:22px;background:#fff;
+  border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);transform:rotate(45deg) skew(8deg,8deg)}
+.bubble b{display:block;font-size:1.02rem;font-weight:900;margin-bottom:5px}
+.bubble b .e{margin-right:6px}
+.bubble p{font-size:.85rem;color:var(--sub)}
+.bubble.pk{border-color:var(--pink)}.bubble.pk:after{border-color:var(--pink)}
+.bubble.bl{border-color:var(--blue)}.bubble.bl:after{border-color:var(--blue)}
+.bubble.gr{border-color:var(--green)}.bubble.gr:after{border-color:var(--green)}
+.roomimg{border:3px solid var(--ink);border-radius:20px;overflow:hidden;background:#fff;
+  box-shadow:6px 6px 0 rgba(46,42,37,.16);margin-bottom:16px}
+.roomimg img{width:100%;display:block}
+.chips{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:20px 22px;box-shadow:4px 4px 0 rgba(46,42,37,.14)}
+.chips .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chips .row+.row{margin-top:10px}
+.chips .lb{font-size:.8rem;font-weight:900;margin-right:4px}
+.chip{border:2px solid var(--ink);border-radius:999px;padding:4px 13px;font-size:.78rem;font-weight:900;background:#EAF3EA}
+.chip.no{background:#F3F0EB;color:var(--sub);text-decoration:line-through;text-decoration-thickness:2px}
+
+/* price */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+@media(max-width:760px){.prices{grid-template-columns:1fr}}
+.pr{position:relative;background:#fff;border:3px solid var(--ink);border-radius:20px;padding:24px 22px;text-align:center;
+  box-shadow:4px 4px 0 rgba(46,42,37,.14)}
+.pr .nm{font-size:.9rem;font-weight:900}
+.pr .yen{font-size:2rem;font-weight:900;letter-spacing:-.03em;margin:6px 0 2px}
+.pr .yen small{font-size:.85rem;font-weight:900;color:var(--sub)}
+.pr p{font-size:.8rem;color:var(--sub)}
+.pr.hot{border-color:var(--pink);box-shadow:5px 5px 0 rgba(233,115,107,.35)}
+.pr .rib{position:absolute;top:-13px;left:50%;transform:translateX(-50%) rotate(-2deg);background:var(--pink);color:#fff;
+  border:2px solid var(--ink);border-radius:4px;padding:3px 13px;font-size:.72rem;font-weight:900;white-space:nowrap}
+.note{background:#FFF1D6;border:2px dashed var(--ink);border-radius:14px;padding:14px 18px;font-size:.82rem;color:var(--ink)}
+.note b{font-weight:900}
+
+/* hiraku */
+.hiraku{background:#fff;border:3px solid var(--blue);border-radius:24px;padding:26px;box-shadow:5px 5px 0 rgba(62,143,168,.3)}
+.hiraku>p{font-size:.9rem;color:var(--sub);text-align:center;max-width:600px;margin:0 auto 18px}
+.hgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:760px){.hgrid{grid-template-columns:repeat(2,1fr)}}
+.hv{background:#F2F8FA;border:2px solid var(--ink);border-radius:16px;padding:14px 12px;text-align:center}
+.hv .e{font-size:1.7rem}
+.hv b{display:block;font-size:.85rem;font-weight:900;margin-top:4px}
+.hiraku .free{text-align:center;margin-top:16px;font-size:.82rem;font-weight:900}
+.hiraku .free span{background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:4px 14px;margin:0 4px;display:inline-block}
+
+/* faq */
+.faq{display:grid;gap:12px}
+.qa{background:#fff;border:3px solid var(--ink);border-radius:18px;padding:18px 22px;box-shadow:4px 4px 0 rgba(46,42,37,.14)}
+.qa b{display:block;font-size:.94rem;font-weight:900;margin-bottom:4px}
+.qa b:before{content:"Q";display:inline-grid;place-items:center;width:24px;height:24px;margin-right:9px;
+  background:var(--pink);color:#fff;border:2px solid var(--ink);border-radius:50%;font-size:.78rem;vertical-align:2px}
+.qa p{font-size:.85rem;color:var(--sub);padding-left:33px}
+
+/* access */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.access{grid-template-columns:1fr}}
+.ac{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:22px;box-shadow:4px 4px 0 rgba(46,42,37,.14)}
+.ac h3{font-size:1rem;font-weight:900;margin-bottom:10px}
+.ac ul{list-style:none}
+.ac li{font-size:.86rem;color:var(--sub);padding:6px 0 6px 28px;position:relative}
+.ac li:before{content:"●";position:absolute;left:6px;color:var(--yellow);text-shadow:0 0 0 var(--ink);-webkit-text-stroke:1px var(--ink)}
+.ac .ph{background:#FFF1D6;border:2px dashed var(--ink);border-radius:10px;padding:8px 12px;font-size:.84rem;font-weight:900;display:inline-block}
+
+/* last cta */
+.last{text-align:center;background:#fff;border:3px solid var(--ink);border-radius:26px;padding:44px 28px;
+  box-shadow:6px 6px 0 rgba(46,42,37,.16);margin-bottom:40px}
+.last h2{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:900;letter-spacing:-.02em;line-height:1.4}
+.last p{font-size:.9rem;color:var(--sub);margin-top:10px}
+.last .btns{justify-content:center}
+
+footer{text-align:center;padding:10px 0 34px;font-size:.76rem;color:var(--sub)}
 </style></head><body>
 <div class="wrap">
   <div class="top">
@@ -92,5 +175,99 @@ h1 .bl{color:var(--blue)}
     <div class="u"><div class="e">✍️</div><b>ちいさな教室</b><p>畳の部屋は正座して向き合う習い事と相性がいい。少人数で。</p></div>
     <div class="u"><div class="e">🍿</div><b>気兼ねしない集まり</b><p>児童館だと気を遣う、カフェだと響く。その中間の居間です。</p></div>
   </div>
+
+  <div class="sec">
+    <div class="sech">
+      <div class="kicker">部屋のこと</div>
+      <h2><span class="nb">先に、ぜんぶ</span><span class="nb">正直に言っておきます。</span></h2>
+    </div>
+    <div class="roomimg"><img src="../room-wide.svg" alt="部屋の全体イメージ"></div>
+    <div class="room">
+      <div class="bubble pk"><b><span class="e">📐</span>広さはこれくらい</b><p>畳の小上がり＋6畳のスペース。ゆったり使うなら4〜6名、詰めて8名まで。</p></div>
+      <div class="bubble bl"><b><span class="e">🚪</span>入口はひとつ</b><p>玄関は住まいと共用です。到着と退出のときにご挨拶あり。ご利用中に立ち入ることはありません。</p></div>
+      <div class="bubble gr"><b><span class="e">🙅</span>できないこと</b><p>宿泊・調理・大音量はできません。ふつうの一軒家なので、そこだけご勘弁ください。</p></div>
+      <div class="bubble"><b><span class="e">🧺</span>あるもの・ないもの</b><p>下のチップをご覧ください。ないものは持ち込みでどうぞ。</p></div>
+    </div>
+    <div class="chips">
+      <div class="row"><span class="lb">あり</span><span class="chip">Wi-Fi</span><span class="chip">電源</span><span class="chip">エアコン</span><span class="chip">トイレ</span><span class="chip">座布団</span><span class="chip">折りたたみ机</span></div>
+      <div class="row"><span class="lb">なし</span><span class="chip no">キッチン</span><span class="chip no">駐車場</span><span class="chip no">専用入口</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sech">
+      <div class="kicker">りょうきん</div>
+      <h2><span class="nb">1時間から、</span><span class="nb">わかりやすく。</span></h2>
+    </div>
+    <div class="prices">
+      <div class="pr"><div class="nm">1時間</div><div class="yen">¥1,000</div><p>まずはお試しに</p></div>
+      <div class="pr hot"><div class="rib">いちばん人気</div><div class="nm">3時間パック</div><div class="yen">¥2,700</div><p>準備〜片付けまで余裕</p></div>
+      <div class="pr"><div class="nm">半日（6時間）</div><div class="yen">¥5,000</div><p>教室やイベントに</p></div>
+    </div>
+    <div class="note"><b>土日祝は2割増し</b>です。キャンセルは<b>前々日まで無料</b>／前日50%／当日100%。</div>
+  </div>
+
+  <div class="sec">
+    <div class="sech">
+      <div class="kicker">月1回</div>
+      <h2><span class="nb">貸すだけじゃなく、</span><span class="nb">ふたりも会をひらきます。</span></h2>
+    </div>
+    <div class="hiraku">
+      <p>月に1回の「ひらく日」。よし＆きょうこが小さな会をひらきます。使い心地の下見がてら、ふらっとどうぞ。</p>
+      <div class="hgrid">
+        <div class="hv"><div class="e">🤖</div><b>AIの使い方の会</b></div>
+        <div class="hv"><div class="e">💻</div><b>エンジニア相談会</b></div>
+        <div class="hv"><div class="e">🍵</div><b>お茶会</b></div>
+        <div class="hv"><div class="e">🎬</div><b>こども映画館</b></div>
+      </div>
+      <div class="free"><span>予約不要</span><span>出入り自由</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sech">
+      <div class="kicker">よくある質問</div>
+      <h2><span class="nb">みんなが気になること、</span><span class="nb">先に答えます。</span></h2>
+    </div>
+    <div class="faq">
+      <div class="qa"><b>入口が共用って、住んでいる人と会いますか？</b><p>到着と退出のときにご挨拶する程度です。ご利用中に立ち入ることはありません。ただ、完全に誰とも会いたくない方には向いていないと思います。正直に。</p></div>
+      <div class="qa"><b>飲食はできますか？</b><p>持ち込みOKです。調理はできません。ゴミはお持ち帰りをお願いしています。</p></div>
+      <div class="qa"><b>営業利用（施術・教室など）はできますか？</b><p>歓迎です。必要な届出や資格は利用者さまの側でお願いします。</p></div>
+      <div class="qa"><b>子連れでも大丈夫ですか？</b><p>大丈夫です。畳にマットを敷いてお使いください。ベビーカーは玄関に置けます。</p></div>
+      <div class="qa"><b>下見はできますか？</b><p>できます。LINEでご連絡ください。15分ほどご案内します。</p></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sech">
+      <div class="kicker">アクセス＆お願い</div>
+      <h2><span class="nb">来るときは、</span><span class="nb">この3つだけ。</span></h2>
+    </div>
+    <div class="access">
+      <div class="ac">
+        <h3>📍 場所</h3>
+        <p class="ph">（最寄駅・徒歩◯分をここに）</p>
+        <ul>
+          <li>ふつうの住宅街の一軒家です</li>
+          <li>ご予約後に詳しい住所をお送りします</li>
+        </ul>
+      </div>
+      <div class="ac">
+        <h3>🙏 お願い</h3>
+        <ul>
+          <li>着いたら玄関のインターホンを押してください</li>
+          <li>靴は玄関で脱いでください</li>
+          <li>駐車場はありません（公共交通でお越しください）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="last">
+    <h2><span class="nb">まずは1時間、</span><span class="nb">使ってみませんか。</span></h2>
+    <p>わからないことは、ふたりのどちらかがすぐ答えます。</p>
+    <div class="btns"><span class="btn">空きをみる</span><span class="btn y">LINEで相談する</span></div>
+  </div>
 </div>
+<footer>C案：ふたりが主役（写真は仮の線画です）</footer>
 </body></html>

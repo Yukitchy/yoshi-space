@@ -62,6 +62,59 @@ a{color:inherit;text-decoration:none}
 .room .sp div b{display:block;font-family:"Lilita One",var(--sans);font-size:1.5rem;color:var(--teal);letter-spacing:0;line-height:1.2}
 .room .sp div span{font-size:.74rem;font-weight:800;color:var(--sub)}
 .pad{padding-bottom:56px}
+
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-top:8px}
+@media(max-width:860px){.plans{grid-template-columns:1fr;padding-top:14px}}
+.plan{position:relative;border:1px solid var(--line);border-radius:16px;padding:26px 20px 22px;text-align:center;background:#fff}
+.plan.hot{border-color:var(--teal);box-shadow:0 10px 28px rgba(18,165,148,.14)}
+.plan .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;
+  font-size:.68rem;font-weight:900;padding:4px 14px;border-radius:999px;letter-spacing:.04em}
+.plan h3{font-size:.88rem;font-weight:900;color:var(--sub)}
+.plan .pr{font-family:"Lilita One",var(--sans);font-size:2rem;color:var(--teal);line-height:1.3;margin-top:4px}
+.plan .per{font-size:.76rem;font-weight:800;color:var(--sub)}
+.notes{margin-top:16px;font-size:.8rem;color:var(--sub);background:#F7F9FA;border:1px solid var(--line);
+  border-radius:12px;padding:14px 20px;list-style:none}
+.notes li{padding-left:1.1em;position:relative}
+.notes li::before{content:"・";position:absolute;left:0}
+
+.cal{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff}
+.cal .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal .dow{text-align:center;font-size:.72rem;font-weight:900;color:var(--sub);padding:2px 0 6px}
+.cal .d{aspect-ratio:1;border-radius:10px;display:grid;place-items:center;font-size:.85rem;font-weight:800}
+.d.ok{background:#E7F7F4;color:#0A7A6D}
+.d.bk{background:#DDE7E5;color:#8CA09B}
+.d.ng{background:#fff;border:1px dashed var(--line);color:#C3CAD0}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:.78rem;font-weight:800;color:var(--sub)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px}
+
+.rev{border:1px solid var(--line);border-radius:16px;padding:36px 24px;text-align:center;background:#F7F9FA}
+.rev .e{font-size:1.9rem}
+.rev b{display:block;font-weight:900;margin:8px 0 4px}
+.rev p{font-size:.85rem;color:var(--sub)}
+
+.host{display:flex;gap:18px;align-items:center;border:1px solid var(--line);border-radius:16px;
+  padding:20px 24px;background:#fff;max-width:560px}
+.host .av{flex:none;font-size:1.5rem;background:#E7F6F3;border-radius:50%;width:58px;height:58px;
+  display:grid;place-items:center;letter-spacing:-6px;text-indent:-4px}
+.host b{font-size:.95rem;font-weight:900}
+.host p{font-size:.82rem;color:var(--sub)}
+
+.faq details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:0 18px;background:#fff}
+.faq summary{cursor:pointer;font-weight:900;font-size:.92rem;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q ";color:var(--teal)}
+.faq details p{font-size:.85rem;color:var(--sub);padding:0 0 16px}
+
+.access{border:1px solid var(--line);border-radius:16px;padding:22px 26px;background:#F7F9FA}
+.access li{list-style:none;padding-left:1.4em;position:relative;font-size:.88rem}
+.access li::before{content:"✔";position:absolute;left:0;color:var(--teal);font-weight:900}
+
+.cta{background:var(--teal);margin-top:60px;padding:54px 24px;text-align:center;color:#fff}
+.cta h2{font-size:clamp(1.25rem,2.6vw,1.6rem);font-weight:900;letter-spacing:-.02em}
+.cta p{font-size:.86rem;opacity:.85;margin-top:6px}
+.cta a{display:inline-block;background:#fff;color:var(--teal);font-weight:900;font-size:.95rem;
+  border-radius:999px;padding:13px 36px;margin-top:20px;box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.foot{text-align:center;padding:24px;font-size:.76rem;color:var(--sub)}
 </style></head><body>
 <div class="top"><div class="wrap">
   <div class="logo">こあがり</div><div class="sp"></div>
@@ -111,6 +164,117 @@ a{color:inherit;text-decoration:none}
       </div>
     </div>
   </div>
+  <div class="sec" id="price">
+    <h2>料金プラン</h2>
+    <div class="s">シンプルな3プラン。長く使うほどおトクです。</div>
+    <div class="plans">
+      <div class="plan">
+        <h3>1時間</h3>
+        <div class="pr">¥1,000</div>
+        <div class="per">ちょっと使いに</div>
+      </div>
+      <div class="plan hot">
+        <span class="badge">人気</span>
+        <h3>3時間パック</h3>
+        <div class="pr">¥2,700</div>
+        <div class="per">1時間あたり¥900</div>
+      </div>
+      <div class="plan">
+        <h3>半日（6時間）</h3>
+        <div class="pr">¥5,000</div>
+        <div class="per">1時間あたり約¥833</div>
+      </div>
+    </div>
+    <ul class="notes">
+      <li>土日祝は2割増しです</li>
+      <li>最低ご利用は1時間から・延長は30分単位で承ります</li>
+      <li>キャンセル料：前々日まで無料 / 前日50% / 当日100%</li>
+    </ul>
+  </div>
+
+  <div class="sec" id="cal">
+    <h2>空き状況</h2>
+    <div class="s">毎週月曜はお休み（貸出しない日）です。最新の空きはお問い合わせ時にご案内します。</div>
+    <div class="cal">
+      <div class="grid">
+        <div class="dow">日</div><div class="dow">月</div><div class="dow">火</div><div class="dow">水</div><div class="dow">木</div><div class="dow">金</div><div class="dow">土</div>
+        <div class="d ok">1</div><div class="d ng">2</div><div class="d ok">3</div><div class="d ok">4</div><div class="d ok">5</div><div class="d bk">6</div><div class="d bk">7</div>
+        <div class="d ok">8</div><div class="d ng">9</div><div class="d ok">10</div><div class="d ok">11</div><div class="d ok">12</div><div class="d bk">13</div><div class="d ok">14</div>
+        <div class="d ok">15</div><div class="d ng">16</div><div class="d ok">17</div><div class="d ok">18</div><div class="d ok">19</div><div class="d ok">20</div><div class="d bk">21</div>
+        <div class="d ok">22</div><div class="d ng">23</div><div class="d ok">24</div><div class="d ok">25</div><div class="d ok">26</div><div class="d bk">27</div><div class="d ok">28</div>
+      </div>
+      <div class="legend">
+        <span><i style="background:#E7F7F4"></i>空き</span>
+        <span><i style="background:#DDE7E5"></i>予約済み</span>
+        <span><i style="background:#fff;border:1px dashed var(--line)"></i>貸出しない日</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" id="rev">
+    <h2>レビュー</h2>
+    <div class="s">利用された方の声をそのまま載せていきます。</div>
+    <div class="rev">
+      <span class="e">🌱</span>
+      <b>まだレビューはありません</b>
+      <p><span class="nb">最初にレビューを書いてくださった方には、</span><span class="nb">1時間ぶんの無料券を差し上げます。</span></p>
+    </div>
+  </div>
+
+  <div class="sec" id="host">
+    <h2>ホスト</h2>
+    <div class="s">ふつうの家の1階です。あたたかく迎えます。</div>
+    <div class="host">
+      <div class="av">🧑👩</div>
+      <div>
+        <b>よし＆きょうこ</b>
+        <p>ふたり暮らしの家の1階をお貸ししています。お問い合わせには当日中に返信します。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" id="faq">
+    <h2>よくある質問</h2>
+    <div class="s">気になることは正直に書いています。</div>
+    <div class="faq">
+      <details>
+        <summary>入口が共用とのことですが、住んでいる方と会いますか？</summary>
+        <p>玄関で挨拶する程度です。ご利用中にお部屋へ立ち入ることはありません。ただし「完全に人と会いたくない」という方には不向きです。正直にお伝えしておきます。</p>
+      </details>
+      <details>
+        <summary>飲食はできますか？</summary>
+        <p>持ち込みOKです。調理はできません。ゴミはお持ち帰りをお願いしています。</p>
+      </details>
+      <details>
+        <summary>教室やサロンなど、営業目的で使えますか？</summary>
+        <p>歓迎です。必要な届出や資格はご利用者さまの側でご用意ください。</p>
+      </details>
+      <details>
+        <summary>子ども連れでも大丈夫ですか？</summary>
+        <p>大丈夫です。畳の上にマットを敷いてお使いください。ベビーカーは玄関に置けます。</p>
+      </details>
+      <details>
+        <summary>下見はできますか？</summary>
+        <p>15分ほどの下見ができます。事前にご連絡ください。</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="sec" id="access">
+    <h2>アクセス</h2>
+    <div class="s">（最寄駅・徒歩◯分をここに）</div>
+    <ul class="access">
+      <li>駐車場はありません。公共交通機関でお越しください</li>
+      <li>靴は玄関で脱いでお上がりください</li>
+    </ul>
+  </div>
   <div class="pad"></div>
 </div>
+
+<div class="cta">
+  <h2><span class="nb">まずは1時間、</span><span class="nb">使ってみませんか</span></h2>
+  <p>¥1,000から。下見だけでも歓迎です。</p>
+  <a href="#">空き状況を問い合わせる</a>
+</div>
+<div class="foot">D案：目的から選ぶ（写真は仮の線画です）</div>
 </body></html>

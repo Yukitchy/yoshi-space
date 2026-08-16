@@ -3,46 +3,115 @@
 <title>B案 しずかな一軒家 — こあがり</title>
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=M+PLUS+Rounded+1c:wght@500;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F6F2E9;--ink:#33302B;--sub:#8B857B;--green:#4E6B4A;
+:root{--bg:#F6F2E9;--ink:#33302B;--sub:#8B857B;--line:#E4DDCE;--green:#4E6B4A;
   --sans:"M PLUS Rounded 1c",-apple-system,"Hiragino Sans",sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);font-weight:500;line-height:1.9;color:var(--ink);background:var(--bg)}
+body{font-family:var(--sans);font-weight:500;line-height:2;color:var(--ink);background:var(--bg)}
 a{color:inherit;text-decoration:none}
+.nb{display:inline-block;white-space:nowrap}
+.wrap{max-width:880px;margin:0 auto;padding:0 40px}
+@media(max-width:700px){.wrap{padding:0 24px}}
 
+/* header */
 .top{display:flex;align-items:flex-start;padding:30px 40px 0}
+@media(max-width:700px){.top{padding:22px 24px 0}}
 .mark{position:relative;background:var(--green);color:#fff;padding:20px 22px 26px;border-radius:4px 4px 4px 26px;
   font-weight:900;font-size:1.05rem;line-height:1.35;text-align:center;letter-spacing:.02em}
 .top .sp{flex:1}
 .top .r{display:flex;gap:22px;font-size:.78rem;font-weight:800;color:var(--sub);letter-spacing:.06em;padding-top:8px}
+@media(max-width:560px){.top .r{display:none}}
 
 .stage{display:flex;justify-content:center;padding:34px 40px 0;position:relative}
 .frame{max-width:720px;width:100%;position:relative}
 .frame img{width:100%;display:block;border-radius:2px}
 .vert{position:absolute;right:-52px;top:8px;writing-mode:vertical-rl;font-size:.82rem;font-weight:700;
   letter-spacing:.34em;color:var(--sub);line-height:1}
-@media(max-width:900px){.vert{display:none}}
+@media(max-width:980px){.vert{display:none}}
 
-.mid{text-align:center;padding:54px 40px 0}
-.mid h1{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;letter-spacing:.02em;line-height:1.9}
-.mid p{color:var(--sub);font-size:.94rem;margin-top:22px;line-height:2.1}
-.rule{width:36px;height:1px;background:#CFC7B6;margin:34px auto}
+.mid{text-align:center;padding:58px 40px 0}
+.mid h1{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;letter-spacing:.02em;line-height:1.95}
+.mid p{color:var(--sub);font-size:.94rem;margin-top:24px;line-height:2.15}
+.rule{width:36px;height:1px;background:#CFC7B6;margin:40px auto}
 
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:760px;margin:0 auto;padding:0 40px 64px}
+/* generic section */
+section{padding:66px 0}
+.lb{text-align:center;font-size:.7rem;font-weight:900;letter-spacing:.28em;color:var(--green);margin-bottom:10px}
+h2{text-align:center;font-size:clamp(1.32rem,2.8vw,1.8rem);font-weight:700;letter-spacing:.02em;line-height:1.8;margin-bottom:16px}
+.lead{text-align:center;color:var(--sub);font-size:.9rem;line-height:2.1;max-width:34em;margin:0 auto 40px}
+
+/* uses: alternating rows */
+.row{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-bottom:52px}
+.row:last-child{margin-bottom:0}
+.row:nth-child(even) .im{order:2}
+@media(max-width:760px){.row{grid-template-columns:1fr;gap:20px}.row:nth-child(even) .im{order:0}}
+.row .im img{width:100%;display:block}
+.row .no{font-family:"Lilita One",var(--sans);font-size:.82rem;letter-spacing:.16em;color:#BDB3A0}
+.row h3{font-size:1.16rem;font-weight:800;letter-spacing:.02em;margin:6px 0 12px;line-height:1.7}
+.row p{font-size:.9rem;color:var(--sub);line-height:2.05}
+.row .tags{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;font-size:.78rem;font-weight:800;color:var(--green)}
+
+/* three columns */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:760px;margin:0 auto}
 @media(max-width:700px){.three{grid-template-columns:1fr;gap:26px}}
-.three div{text-align:center;padding:0 18px;border-right:1px solid #E4DDCE}
+.three div{text-align:center;padding:0 18px;border-right:1px solid var(--line)}
 .three div:last-child{border:none}
 @media(max-width:700px){.three div{border:none}}
-.three b{display:block;font-size:.72rem;font-weight:900;letter-spacing:.2em;color:var(--green);margin-bottom:8px}
-.three span{font-size:.9rem;color:var(--sub)}
+.three b{display:block;font-size:.7rem;font-weight:900;letter-spacing:.2em;color:var(--green);margin-bottom:10px}
+.three span{font-size:.9rem;color:var(--sub);line-height:2}
 
-.cta{text-align:center;padding-bottom:70px}
-.cta a{display:inline-block;border:1px solid var(--ink);border-radius:0;padding:15px 46px;
-  font-size:.86rem;font-weight:800;letter-spacing:.14em}
+/* spec list */
+.dl{max-width:620px;margin:0 auto;border-top:1px solid var(--line)}
+.dl div{display:grid;grid-template-columns:8em 1fr;gap:20px;padding:16px 4px;border-bottom:1px solid var(--line);font-size:.9rem}
+@media(max-width:560px){.dl div{grid-template-columns:1fr;gap:2px}}
+.dl dt{font-size:.72rem;font-weight:900;letter-spacing:.14em;color:var(--green);padding-top:.5em}
+.dl dd{color:var(--sub)}
+.dl dd small{display:block;font-size:.78rem;opacity:.85}
+.eq{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center;max-width:620px;margin:26px auto 0;
+  font-size:.82rem;color:var(--sub)}
+.eq span::before{content:"・"}
+.eq span.off{opacity:.4;text-decoration:line-through}
+
+/* price */
+.pr{max-width:620px;margin:0 auto}
+.pr .l{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line)}
+.pr .l:first-child{border-top:1px solid var(--line)}
+.pr .l .n{font-size:.94rem;font-weight:800}
+.pr .l .n small{display:block;font-size:.78rem;font-weight:500;color:var(--sub)}
+.pr .l .y{font-family:"Lilita One",var(--sans);font-size:1.6rem;letter-spacing:0;white-space:nowrap}
+.pnote{text-align:center;font-size:.8rem;color:var(--sub);margin-top:24px;line-height:2}
+
+/* event */
+.evt{max-width:620px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);padding:38px 30px}
+.evt .d{font-family:"Lilita One",var(--sans);font-size:2.6rem;color:var(--green);line-height:1}
+.evt .m{font-size:.68rem;font-weight:900;letter-spacing:.2em;color:var(--green)}
+.evt h3{font-size:1.1rem;font-weight:800;letter-spacing:.02em;margin:14px 0 10px}
+.evt p{font-size:.88rem;color:var(--sub);line-height:2.05}
+.evt .th{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.evt .th span{border:1px solid var(--line);padding:5px 13px;font-size:.76rem;font-weight:700;color:var(--sub)}
+
+/* faq */
+.faq{max-width:680px;margin:0 auto}
+.faq div{border-bottom:1px solid var(--line);padding:22px 0}
+.faq div:first-child{border-top:1px solid var(--line)}
+.faq b{display:block;font-size:.94rem;font-weight:800;letter-spacing:.02em;margin-bottom:8px}
+.faq p{font-size:.87rem;color:var(--sub);line-height:2.05}
+
+/* access */
+.ac{max-width:620px;margin:0 auto;text-align:center}
+.ac p{font-size:.9rem;color:var(--sub);line-height:2.1}
+.ac p+p{margin-top:14px}
+
+.cta{text-align:center;padding:0 0 80px}
+.cta a{display:inline-block;border:1px solid var(--ink);padding:15px 46px;font-size:.86rem;font-weight:800;letter-spacing:.14em}
+.cta a+a{margin-left:12px;border-color:var(--line);color:var(--sub)}
+@media(max-width:560px){.cta a+a{margin:12px 0 0}}
+footer{border-top:1px solid var(--line);padding:30px 0 60px;text-align:center;font-size:.76rem;color:var(--sub);letter-spacing:.06em}
 </style></head><body>
+
 <div class="top">
   <div class="mark">こあがり<br><span style="font-size:.6rem;letter-spacing:.2em;font-weight:700">KOAGARI</span></div>
   <div class="sp"></div>
-  <div class="r"><span>ABOUT</span><span>USE</span><span>PRICE</span><span>ACCESS</span></div>
+  <div class="r"><a href="#use">USE</a><a href="#room">ROOM</a><a href="#price">PRICE</a><a href="#access">ACCESS</a></div>
 </div>
 
 <div class="stage">
@@ -60,11 +129,123 @@ a{color:inherit;text-decoration:none}
   <div class="rule"></div>
 </div>
 
-<div class="three">
-  <div><b>SPACE</b><span>畳の小上がり＋6畳<br>ゆったり4〜6名</span></div>
-  <div><b>PRICE</b><span>1時間 1,000円<br>3時間 2,700円</span></div>
-  <div><b>USE</b><span>施術・教室・集まり<br>撮影・上映会</span></div>
-</div>
+<section><div class="wrap">
+  <div class="three">
+    <div><b>SPACE</b><span>畳の小上がり＋6畳<br>ゆったり4〜6名</span></div>
+    <div><b>PRICE</b><span>1時間 1,000円<br>3時間 2,700円</span></div>
+    <div><b>USE</b><span>施術・教室・集まり<br>撮影・上映会</span></div>
+  </div>
+</div></section>
 
-<div class="cta"><a>空き状況をみる</a></div>
+<section id="use"><div class="wrap">
+  <div class="lb">USE</div>
+  <h2>この部屋で、できること。</h2>
+  <p class="lead">広い場所ではありません。そのかわり、数人で静かに向き合う時間には、ちょうどよくできています。</p>
+
+  <div class="row">
+    <div class="im"><img src="../room.svg" alt=""></div>
+    <div>
+      <div class="no">01</div>
+      <h3>施術のための、静かな部屋。</h3>
+      <p>お客さんはいるけれど、まだ自分の店は持てない。そんな施術者の方が、必要な日だけ借りていきます。生活音のない住宅街と、畳のやわらかさが、そのまま施術の環境になります。</p>
+      <div class="tags"><span>マッサージ・整体</span><span>ネイル・まつげ</span><span>ヘッドスパ</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="im"><img src="../room.svg" alt=""></div>
+    <div>
+      <div class="no">02</div>
+      <h3>数人に、教えるための部屋。</h3>
+      <p>畳の部屋は、正座して向き合う習い事とよく合います。少人数なので、教える側も緊張しません。机は折りたたみのものをご用意しています。プロジェクターの持ち込みも歓迎です。</p>
+      <div class="tags"><span>書道・写経・お茶</span><span>AIの使い方</span><span>勉強会</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="im"><img src="../room.svg" alt=""></div>
+    <div>
+      <div class="no">03</div>
+      <h3>気をつかわずに、集まる部屋。</h3>
+      <p>カフェでは声が響き、児童館では少し気を遣う。その中間にある、貸し切りの居間です。畳なので、小さなお子さんを寝かせたままの会でも大丈夫です。</p>
+      <div class="tags"><span>ママ会・お茶会</span><span>上映会</span><span>撮影</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="room"><div class="wrap">
+  <div class="lb">THE ROOM</div>
+  <h2>この部屋のこと。</h2>
+  <p class="lead">来てから「思っていたのと違う」が起きないように、できないことも先に書いています。</p>
+  <dl class="dl">
+    <div><dt>ひろさ</dt><dd>畳の小上がり ＋ 6畳ほどのスペース<small>ゆったり4〜6名／詰めて8名まで</small></dd></div>
+    <div><dt>いりぐち</dt><dd>玄関ひとつ・住まいと共用<small>到着と退出のときにご挨拶します。利用中に立ち入ることはありません</small></dd></div>
+    <div><dt>できること</dt><dd>施術・教室・集まり・撮影・上映会</dd></div>
+    <div><dt>できないこと</dt><dd>宿泊・調理・大音量<small>お茶とお菓子の持ち込みはできます</small></dd></div>
+    <div><dt>アクセス</dt><dd>（最寄駅・徒歩◯分をここに）<small>駐車場はありません</small></dd></div>
+  </dl>
+  <div class="eq">
+    <span>Wi-Fi</span><span>電源</span><span>エアコン</span><span>トイレ</span><span>座布団</span><span>折りたたみ机</span>
+    <span class="off">キッチン</span><span class="off">駐車場</span><span class="off">専用入口</span>
+  </div>
+</div></section>
+
+<section id="price"><div class="wrap">
+  <div class="lb">PRICE</div>
+  <h2>料金</h2>
+  <p class="lead">1時間からお使いいただけます。最初は控えめな設定にしています。</p>
+  <div class="pr">
+    <div class="l"><div class="n">1時間<small>短時間のお試しに</small></div><div class="y">¥1,000</div></div>
+    <div class="l"><div class="n">3時間パック<small>施術2〜3名分、教室1コマ＋準備</small></div><div class="y">¥2,700</div></div>
+    <div class="l"><div class="n">半日（6時間）<small>ワークショップ・撮影・貸し切り</small></div><div class="y">¥5,000</div></div>
+  </div>
+  <p class="pnote">最低利用1時間／延長は30分単位／土日祝は2割増し<br>キャンセル：前々日まで無料・前日50%・当日100%</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="lb">MONTHLY</div>
+  <h2>月にいちど、ひらく日。</h2>
+  <p class="lead">貸すだけの日とは別に、月に1回だけ、この家をひらいています。<br>借りる前にのぞいてみたい方は、どうぞこちらへ。</p>
+  <div class="evt">
+    <div class="m">MONTHLY</div>
+    <div class="d">1</div>
+    <h3>テーマは毎回ちがいます</h3>
+    <p>お茶を出すだけの日もあれば、誰かに何かを教わる日もあります。<br>予約不要・出入り自由。次回のテーマはお知らせでご案内します。</p>
+    <div class="th"><span>AIの使い方の会</span><span>エンジニア相談会</span><span>お茶とおしゃべり</span><span>こども映画館</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="lb">FAQ</div>
+  <h2>よくある質問</h2>
+  <div class="faq">
+    <div><b>入口がひとつとありますが、住んでいる方と顔を合わせますか。</b>
+      <p>玄関は共用です。到着と退出のときにご挨拶することがあります。部屋は貸し切りで、利用中に住人が出入りすることはありません。完全に人と会わない場所をお探しの方には、正直あまり向いていません。</p></div>
+    <div><b>飲食はできますか。</b>
+      <p>持ち込みのお茶・お菓子はお使いいただけます。調理は設備がないためできません。ゴミはお持ち帰りをお願いしています。</p></div>
+    <div><b>施術やレッスンで、料金をいただいてもよいですか。</b>
+      <p>はい。営業目的のご利用を歓迎しています。資格が必要な業務については、利用者ご自身で必要な届出をお願いします。</p></div>
+    <div><b>子ども連れでも大丈夫ですか。</b>
+      <p>大丈夫です。畳ですので、マットを敷けば寝かせたままでも安心です。ベビーカーは玄関に置いていただけます。</p></div>
+    <div><b>下見はできますか。</b>
+      <p>できます。ご連絡ください。15分ほどで実際の広さと入口をご覧いただけます。</p></div>
+  </div>
+</div></section>
+
+<section id="access"><div class="wrap">
+  <div class="lb">ACCESS</div>
+  <h2>行き方と、お願い。</h2>
+  <div class="ac">
+    <p>（最寄駅・徒歩◯分・目印になる建物をここに書きます）<br>
+    玄関のインターホンを押してください。中でお迎えします。</p>
+    <p>靴は玄関で脱いでください。お時間になりましたら、片付けまで済ませてご退出をお願いします。<br>
+    駐車場はありません。近隣のコインパーキングをご利用ください。</p>
+  </div>
+  <div class="rule"></div>
+</div></section>
+
+<div class="cta">
+  <a>空き状況をみる</a><a>LINEで相談する</a>
+</div>
+<footer>こあがり ／ 畳のある、ちいさな貸し空間 ── B案：しずかな一軒家（写真は仮の線画です）</footer>
 </body></html>

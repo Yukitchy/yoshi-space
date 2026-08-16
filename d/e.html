@@ -55,6 +55,79 @@ h1{font-size:clamp(1.9rem,4.2vw,2.9rem);font-weight:800;letter-spacing:-.03em;li
 .cl{display:flex;flex-wrap:wrap;gap:9px}
 .cl span{border:1.5px solid var(--ink);border-radius:2px;padding:7px 14px;font-size:.84rem;font-weight:800;background:#fff}
 .cl span.o{background:var(--ink);color:#F4F1EA}
+
+/* section header (editorial, continues hero numbering) */
+.sec{border-top:2px solid var(--ink);padding:44px 0 52px}
+.sec .no{font-family:"Lilita One",var(--sans);font-size:.9rem;letter-spacing:.1em;color:var(--acc)}
+.sec h2{font-size:clamp(1.3rem,2.6vw,1.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.4;margin:8px 0 26px}
+.sec .lead{font-size:.9rem;color:var(--sub);margin:-16px 0 26px;max-width:36em}
+
+/* flow: 4 steps */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--ink);background:#fff}
+@media(max-width:860px){.flow{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.flow{grid-template-columns:1fr}}
+.flow div{padding:22px 20px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.flow div:nth-child(4n){border-right:none}
+@media(max-width:860px){.flow div:nth-child(2n){border-right:none}.flow div:nth-child(4n-1){border-right:1px solid var(--line)}}
+@media(max-width:520px){.flow div{border-right:none}}
+.flow b{display:block;font-family:"Lilita One",var(--sans);font-size:1.7rem;line-height:1;color:var(--acc);margin-bottom:10px}
+.flow h3{font-size:.98rem;font-weight:900;margin-bottom:5px}
+.flow p{font-size:.83rem;color:var(--sub)}
+
+/* three user types */
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);background:#fff}
+@media(max-width:860px){.who{grid-template-columns:1fr}}
+.who>div{padding:24px 22px 26px;border-right:1px solid var(--line)}
+.who>div:last-child{border-right:none}
+@media(max-width:860px){.who>div{border-right:none;border-bottom:1px solid var(--line)}.who>div:last-child{border-bottom:none}}
+.who .t{font-size:.74rem;font-weight:900;letter-spacing:.12em;color:var(--ink2)}
+.who h3{font-size:1.08rem;font-weight:900;margin:4px 0 10px}
+.who p{font-size:.86rem}
+.who .ex{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:.8rem;color:var(--sub)}
+.who .ex b{font-weight:900;color:var(--ink)}
+
+/* ひらく日 — newspaper notice */
+.notice{border:2px solid var(--ink);background:#fff;padding:30px 28px 32px}
+.notice .hd{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:16px}
+.notice .hd b{font-size:1.15rem;font-weight:900;letter-spacing:-.02em}
+.notice .hd span{font-size:.76rem;font-weight:800;color:var(--acc);letter-spacing:.1em}
+.notice p{font-size:.9rem;max-width:38em}
+.notice ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.notice li{border:1.5px solid var(--ink);border-radius:2px;padding:6px 13px;font-size:.83rem;font-weight:800}
+.notice .free{margin-top:14px;font-size:.8rem;color:var(--sub)}
+
+/* FAQ — Q/A rules */
+.faq{border-top:2px solid var(--ink)}
+.qa{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid var(--line);padding:20px 0}
+@media(max-width:700px){.qa{grid-template-columns:1fr;gap:6px}}
+.qa:last-child{border-bottom:none}
+.qa .q{font-size:.92rem;font-weight:900;color:var(--ink2);padding-right:20px}
+.qa .a{font-size:.9rem}
+.qa .a small{display:block;font-size:.8rem;color:var(--sub);margin-top:3px}
+
+/* access */
+.acc{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--ink);background:#fff}
+@media(max-width:860px){.acc{grid-template-columns:1fr}}
+.acc .ai{padding:26px 24px}
+.acc .am{background:#EDE8DD;display:grid;place-items:center;padding:20px;border-left:1px solid var(--line)}
+@media(max-width:860px){.acc .am{border-left:none;border-top:1px solid var(--line)}}
+.acc .am img{width:100%;max-width:420px;display:block}
+.acc dl div{display:flex;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.88rem}
+.acc dl div:last-child{border-bottom:none}
+.acc dt{flex:0 0 6.5em;font-weight:900;font-size:.78rem;letter-spacing:.08em;color:var(--ink2);padding-top:2px}
+.acc dd{margin:0}
+
+/* final CTA */
+.cta{background:var(--ink2);color:#F2EFE7;padding:56px 0;border-top:2px solid var(--ink)}
+.cta .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.cta h2{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.4}
+.cta p{font-size:.9rem;opacity:.85}
+.cta .btn{background:#F0B851;color:var(--ink);font-weight:900;padding:16px 38px;font-size:1rem;border-radius:2px;display:inline-block}
+
+/* footer */
+.foot{border-top:2px solid var(--ink);padding:22px 0 30px}
+.foot .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.76rem;color:var(--sub)}
+.foot b{font-weight:900;color:var(--ink)}
 </style></head><body>
 <div class="top"><div class="wrap">
   <div class="logo">こあがり ／ KOAGARI</div><div class="sp"></div>
@@ -96,4 +169,94 @@ h1{font-size:clamp(1.9rem,4.2vw,2.9rem);font-weight:800;letter-spacing:-.03em;li
     <span>撮影スタジオ</span><span>ベビーOK</span><span>貸し切り</span><span>一軒家</span><span>畳</span><span>3時間パック</span>
   </div>
 </div>
+
+<div class="sec"><div class="wrap">
+  <div class="no">A SMALL ROOM FOR RENT — 02</div>
+  <h2><span class="nb">予約から退出まで、</span><span class="nb">ぜんぶで4つ。</span></h2>
+  <div class="flow">
+    <div><b>01</b><h3>予約リクエスト</h3><p>使いたい日時を送ってください。仮おさえの段階です。</p></div>
+    <div><b>02</b><h3>前日までに確認の連絡</h3><p>こちらから確認のご連絡をして、予約が確定します。</p></div>
+    <div><b>03</b><h3>当日は玄関インターホン</h3><p>鳴らしていただければ開けます。ご挨拶はここだけです。</p></div>
+    <div><b>04</b><h3>片付けて退出</h3><p>使う前の状態に戻して、ゴミはお持ち帰りください。</p></div>
+  </div>
+</div></div>
+
+<div class="sec"><div class="wrap">
+  <div class="no">A SMALL ROOM FOR RENT — 03</div>
+  <h2><span class="nb">こんな使い方を</span><span class="nb">想定しています。</span></h2>
+  <div class="who">
+    <div>
+      <div class="t">TYPE A</div><h3>施術者の方</h3>
+      <p>マッサージ・ネイル・整体など。畳の落ち着きと、貸し切りの静かさを施術に。</p>
+      <div class="ex">使い方の例：<b>3時間パック × 月3件</b><br>準備と片付けを含めて1件3時間の計算です。</div>
+    </div>
+    <div>
+      <div class="t">TYPE B</div><h3>少人数の先生</h3>
+      <p>書道・お茶・AI講座など、4〜6名までの教室。折りたたみ机と座布団があります。</p>
+      <div class="ex">使い方の例：<b>3時間 × 月1〜2件</b><br>定例の教室の会場として。</div>
+    </div>
+    <div>
+      <div class="t">TYPE C</div><h3>集まりの幹事</h3>
+      <p>ママ会・上映会・ボードゲーム会。カフェより気兼ねなく、家より片付けがラク。</p>
+      <div class="ex">使い方の例：<b>半日 × 月1件</b><br>月イチの集まりの定位置に。</div>
+    </div>
+  </div>
+</div></div>
+
+<div class="sec"><div class="wrap">
+  <div class="no">A SMALL ROOM FOR RENT — 04</div>
+  <h2><span class="nb">月に1度、</span><span class="nb">この部屋が「ひらく日」。</span></h2>
+  <div class="notice">
+    <div class="hd"><span>お知らせ</span><b>ふたりが会をひらきます</b></div>
+    <p>貸すだけの部屋にはしません。月に1度、住んでいるふたりが小さな会をひらきます。部屋の空気を見に来るついでに、どうぞ。</p>
+    <ul>
+      <li>AIの使い方の会</li><li>エンジニア相談会</li><li>お茶会</li><li>こども映画館</li>
+    </ul>
+    <div class="free">予約不要。開催日はこのページでお知らせします。</div>
+  </div>
+</div></div>
+
+<div class="sec"><div class="wrap">
+  <div class="no">A SMALL ROOM FOR RENT — 05</div>
+  <h2><span class="nb">よくある質問にも、</span><span class="nb">言い切りで答えます。</span></h2>
+  <div class="faq">
+    <div class="qa"><div class="q">入口が共用って、住んでいる人と会いますか？</div>
+      <div class="a">到着と退出のときに挨拶する程度です。利用中に立ち入ることはありません。<small>ただし「完全に人と会いたくない」方には、この部屋は向いていません。正直に書いておきます。</small></div></div>
+    <div class="qa"><div class="q">飲食はできますか？</div>
+      <div class="a">持ち込みはOKです。調理はできません。ゴミはお持ち帰りください。</div></div>
+    <div class="qa"><div class="q">営業利用（施術・教室）はいいんですか？</div>
+      <div class="a">歓迎です。そのために貸しています。<small>営業に必要な届出・資格は利用者さまの側でお願いします。</small></div></div>
+    <div class="qa"><div class="q">子連れでも大丈夫ですか？</div>
+      <div class="a">大丈夫です。畳にマットを敷いてお使いください。ベビーカーは玄関に置けます。</div></div>
+    <div class="qa"><div class="q">下見はできますか？</div>
+      <div class="a">できます。15分ほど、事前にご連絡ください。</div></div>
+  </div>
+</div></div>
+
+<div class="sec"><div class="wrap">
+  <div class="no">A SMALL ROOM FOR RENT — 06</div>
+  <h2><span class="nb">場所のこと。</span></h2>
+  <div class="acc">
+    <div class="ai">
+      <dl>
+        <div><dt>最寄駅</dt><dd>（最寄駅・徒歩◯分をここに）</dd></div>
+        <div><dt>駐車場</dt><dd>ありません。近隣のコインパーキングをご利用ください</dd></div>
+        <div><dt>入り方</dt><dd>玄関のインターホンを鳴らしてください</dd></div>
+        <div><dt>くつ</dt><dd>玄関で脱いでお上がりください</dd></div>
+      </dl>
+    </div>
+    <div class="am"><img src="../room-wide.svg" alt="部屋の全体"></div>
+  </div>
+</div></div>
+
+<div class="cta"><div class="wrap">
+  <h2><span class="nb">まずは1時間、</span><span class="nb">使ってみませんか。</span></h2>
+  <p>書いてあるとおりの部屋か、確かめに来てください。</p>
+  <span class="btn">空き状況をみる</span>
+</div></div>
+
+<div class="foot"><div class="wrap">
+  <div><b>こあがり ／ KOAGARI</b></div>
+  <div>E案：ぜんぶ言い切る（写真は仮の線画です）</div>
+</div></div>
 </body></html>
